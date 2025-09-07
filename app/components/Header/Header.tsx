@@ -4,12 +4,13 @@ import Menu from "./Menu";
 import NavBar from "./NavBar";
 
 import Image from "next/image";
+import Link from "next/link";
 
 function LogoHeader() {
   return (
-    <a href="/" className="text-3xl font-bold text-gray-800">
+    <Link href="/" className="text-3xl font-bold text-gray-800">
       <Image src={Logo} alt="Craig Sampson Logo" width={100} height={100} className="w-14" />
-    </a>
+    </Link>
   );
 }
 

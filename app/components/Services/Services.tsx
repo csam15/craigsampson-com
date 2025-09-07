@@ -8,7 +8,7 @@ const services = {
     icon: dev,
     title: "Web Development",
     description: "Building responsive and functional websites.",
-    link: "/webdev",
+    link: "/Web-Development",
     button: "Projects",
   },
   electronics: {
