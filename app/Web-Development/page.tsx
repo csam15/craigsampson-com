@@ -1,4 +1,4 @@
-import dev from "../assets/webdev/dev.png";
+import dev from "../../public/webdev/dev.png";
 import WebDevCard from "../components/WebDevCard";
 
 import Image from "next/image";
