@@ -31,12 +31,12 @@ export default function Services() {
   return (
     <div
       id="services"
-      className="scroll-mt-18 lg:scroll-mt-23 font-space text-primary h-auto section-effect"
+      className="scroll-mt-18 lg:scroll-mt-23 flex flex-col justify-between items-center font-space text-primary h-auto service-container"
     >
-      <h1 className="uppercase text-4xl md:text-5xl text-center pb-4 lg:pb-8">
-        services & solutions
-      </h1>
-      <div className="flex flex-col xl:flex-row justify-center items-center gap-6 lg:gap-10 px-4 sm:px-6 lg:px-8">
+      <div className="uppercase text-4xl md:text-5xl text-center pb-4 lg:pb-8">
+        <h1>services & solutions</h1>
+      </div>
+      <div className="flex flex-1 flex-col xl:flex-row justify-center items-center gap-6 lg:gap-10 px-4 sm:px-6 lg:px-8">
         <ServiceCard
           icon={services.webdev.icon}
           title={services.webdev.title}

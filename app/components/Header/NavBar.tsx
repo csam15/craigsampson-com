@@ -1,11 +1,17 @@
 'use client';
 
 import React, { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const sections = ["home", "about", "projects", "services", "contact", "resume"];
 
 export default function NavBar() {
   const [active, setActive] = useState("home");
+  const pathname = usePathname();
+
+  // Check if user is on home page
+  const isHomePage = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,10 +40,11 @@ export default function NavBar() {
     <>
       <nav className="hidden md:block">
         <ul className="flex space-x-8 font-space md:text-lg lg:text-xl text-primary">
-          {sections.map((section) => (
+          {isHomePage ? (
+          sections.map((section) => (
             <li key={section}>
-              <a
-                // href={`#${section}`}
+              <Link
+                href={`#${section}`}
                 className={`hover:text-accent pointer-events-none transition-colors duration-600 ease-in-out ${
                   section !== "resume" && active === section
                     ? "border-b border-primary"
@@ -45,9 +52,19 @@ export default function NavBar() {
                 }`}
               >
                 {section.charAt(0).toUpperCase() + section.slice(1)}
-              </a>
+              </Link>
             </li>
-          ))}
+          ))) : (
+              // On other pages - only show Home link
+              <li>
+                <Link
+                  href="/"
+                  className="block text-primary hover:text-accent p-1 transition-colors duration-600 ease-in-out font-bold"
+                >
+                  Home
+                </Link>
+              </li>
+          )}
         </ul>
       </nav>
     </>

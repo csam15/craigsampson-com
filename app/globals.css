@@ -16,7 +16,11 @@
 }
 
 @layer components {
-  .section-effect {
-    @apply my-4 mx-4 lg:mb-6 lg:mx-8 xl:mx-14 rounded-xl bg-background p-4 sm:p-6 md:p-8 lg:p-12 shadow-2xl;
+  .hero-container {
+    @apply max-w-6xl mx-6 sm:mx-12 mb-6 px-4 sm:px-6 py-8 sm:py-14 lg:py-18 rounded-xl bg-background shadow-2xl;
+  }
+
+  .service-container {
+    @apply max-w-[90rem] 2xl:max-w-fit mx-6 sm:mx-20 md:mx-36 xl:mx-8 2xl:mx-auto p-8 rounded-xl bg-background shadow-2xl;
   }
 }

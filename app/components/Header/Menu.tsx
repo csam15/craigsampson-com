@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { useRouter, usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 import Link from "next/link";
 import hamburger from "../../../public/hamburger-menu.svg";
@@ -55,19 +55,19 @@ export default function Menu() {
       {isOpen && (
         <nav className="absolute top-16 md:top-20 right-3 bg-background-secondary shadow-lg font-outfit text-center text-lg md:text-xl rounded-lg p-5 md:p-8">
           <ul className="flex flex-col space-y-4">
-            {location.pathname === "/" ? (
+            {isHomePage ? (
               // On home page - show all sections
               sections.map((section) => (
                 <li key={section.name}>
-                  <a
-                    href={section.name}
+                  <Link
+                    href={`#${section.name}`}
                     className={`block text-primary hover:text-accent p-1 transition-colors duration-600 ease-in-out ${
                       section.name === active ? "font-bold" : ""
                     }`}
                   >
                     {section.name.charAt(0).toUpperCase() +
                       section.name.slice(1)}
-                  </a>
+                  </Link>
                 </li>
               ))
             ) : (
