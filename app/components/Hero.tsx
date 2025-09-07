@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
 import { TypeAnimation } from "react-type-animation";
 
-import Button from "./Buttons/Button";
+import { PrimaryButton } from "./Buttons/Button";
 import github from "../../public/icons8-github.svg";
 import linkedin from "../../public/icons8-linkedin.svg";
 
@@ -36,13 +36,16 @@ export default function Hero() {
           Crafting solutions through code, creativity and repair
         </h3>
         <div className="flex flex-col md:flex-row justify-center items-center mt-10 gap-6 lg:gap-8">
-          <Button
+          <PrimaryButton
             img={github}
             link="https://github.com/csam15"
             label="GITHUB"
           />
-          <Button link="mailto:craigsampson15@gmail.com" label="CONTACT" />
-          <Button
+          <PrimaryButton
+            link="mailto:craigsampson15@gmail.com"
+            label="CONTACT"
+          />
+          <PrimaryButton
             img={linkedin}
             link="https://www.linkedin.com/in/craig-sampson15/"
             label="LINKEDIN"

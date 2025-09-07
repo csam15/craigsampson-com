@@ -1,5 +1,5 @@
 import Logo from "../../../public/Logo.png";
-import Button from "../Buttons/Button";
+import {PrimaryButton} from "../Buttons/Button";
 import Menu from "./Menu";
 import NavBar from "./NavBar";
 
@@ -19,7 +19,7 @@ export default function Header() {
       <div className="flex items-center justify-between w-full md:hidden">
         <LogoHeader />
         <div className="flex items-center justify-center gap-4">
-          <Button link="#contact" label="CONTACT"/>
+          <PrimaryButton link="#contact" label="CONTACT" />
           <Menu />
         </div>
       </div>
