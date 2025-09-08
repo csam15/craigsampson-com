@@ -1,27 +1,31 @@
-import { PrimaryButton } from "./Buttons/Button";
+import Image from "next/image";
 
 interface WebDevCardProps {
   title: string;
   description: string;
-  tech: string[];
+  image: readonly [string, number, number];
   link: string;
 }
 
-export default function WebDevCard({ title, description, tech, link }: WebDevCardProps) {
+export default function WebDevCard({
+  title,
+  description,
+  image,
+  link,
+}: WebDevCardProps) {
   return (
-    <div className="flex flex-col justify-center items-center gap-4 bg-background-secondary border border-secondary rounded-xl p-4">
-      <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2">{title}</h3>
-      <p className="text-sm md:text-base lg:text-lg border-1 border-secondary rounded-xl p-3 text-white text-center">{description}</p>
-      <div className="flex justify-center items-center gap-4">
-        <ul className="list-none border-1 border-secondary rounded-xl p-3 text-center text-white">
-            <h3 className="text-2xl font-bold text-primary">Tech</h3>
-          {tech.map((t, index) => (
-              <li key={index} >
-                  <p>{t}</p>
-              </li>
-          ))} 
-        </ul>
-        <PrimaryButton link={link} label="View Project" />
+    <div className="py-4 transition-transform duration-800 hover:scale-[1.1] hover:rounded-b-xl">
+      <a href={link} target="_blank" rel="noopener noreferrer">
+      <Image
+        src={image[0]}
+        alt={title}
+        width={image[1]}
+        height={image[2]}
+        className="h-60 w-80 sm:w-90 cursor-pointer border-t-2 border-x-2 border-black rounded-t-xl bg-background-secondary"
+      /></a>
+      <div className="flex flex-col justify-between items-center bg-background-secondary border-b-2 border-x-2 border-t-1 border-black rounded-b-xl py-8 w-80 sm:w-90 h-50">
+        <h1 className="text-2xl font-space mb-2 text-white">{title}</h1>
+        <p className="text-lg text-center px-8 my-auto font-outfit">{description}</p>
       </div>
     </div>
   );

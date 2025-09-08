@@ -45,7 +45,7 @@ export default function NavBar() {
             <li key={section}>
               <Link
                 href={`#${section}`}
-                className={`hover:text-accent pointer-events-none transition-colors duration-600 ease-in-out ${
+                className={`hover:text-accent transition-colors duration-600 ease-in-out ${
                   section !== "resume" && active === section
                     ? "border-b border-primary"
                     : ""
