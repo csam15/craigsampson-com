@@ -29,10 +29,10 @@ export default function Hero() {
             repeat={Infinity}
           />
         </div>
-        <div className="text-6xl md:text-7xl lg:text-8xl text-center font-bold text-white my-4 lg:my-3 px-4 md:px-0">
+        <div className="text-6xl md:text-7xl lg:text-8xl text-center font-bangers text-white my-4 lg:my-3 px-4 md:px-0">
           <h1>CRAIG SAMPSON</h1>
         </div>
-        <h3 className="uppercase font-outfit text-primary text-lg md:text-2xl lg:text-3xl text-center px-10 md:px-5">
+        <h3 className="uppercase font-space text-primary text-lg md:text-2xl lg:text-3xl text-center px-10 md:px-5">
           Crafting solutions through code, creativity and repair
         </h3>
         <div className="flex flex-col md:flex-row justify-center items-center mt-10 gap-6 lg:gap-8">
