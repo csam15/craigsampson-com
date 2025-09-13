@@ -5,18 +5,17 @@
   --font-space: "Space Grotesk", sans-serif;
   --font-outfit: "Outfit", sans-serif;
 
-  --color-background: #161616;
+  --color-background: #edfdfa;
   --color-background-secondary: #272727;
   /* --color-white: #d6d6d6; */
-  --color-primary: #d1b3f5;
-  --color-secondary: #4617b6;
-  --color-secondary-blur: #250374;
-  --color-accent: #3fffef;
+  --color-primary: #4d455f;
+  --color-secondary: #e1d8e8;
+  --color-accent: #39a0ed;
   --color-error: #cf6679;
 }
 
 @layer components {
-  .section-effect {
-    @apply my-4 mx-4 lg:mb-6 lg:mx-8 xl:mx-14 rounded-xl bg-background p-4 sm:p-6 md:p-8 lg:p-12 shadow-2xl;
+  .button-style {
+    @apply 
   }
 }
