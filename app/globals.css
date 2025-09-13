@@ -5,7 +5,7 @@
   --font-space: "Space Grotesk", sans-serif;
   --font-outfit: "Outfit", sans-serif;
 
-  --color-background: #edfdfa;
+  --color-background: #DAFBF5;
   --color-background-secondary: #272727;
   /* --color-white: #d6d6d6; */
   --color-primary: #4d455f;
@@ -16,6 +16,6 @@
 
 @layer components {
   .button-style {
-    @apply 
+    @apply font-space bg-accent text-primary px-4 py-2 rounded-lg text-base;
   }
 }

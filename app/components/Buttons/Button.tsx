@@ -14,7 +14,7 @@ export default function PrimaryButton({
   return (
     <a
       href={link}
-      className=""
+      className="button-style"
     >
       {img ? (
         <Image src={img} alt={label} width={100} height={100} className="inline-block size-5 lg:size-8 mr-1.5" />
