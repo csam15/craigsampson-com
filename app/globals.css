@@ -16,6 +16,6 @@
 
 @layer components {
   .button-style {
-    @apply font-space bg-accent text-primary px-4 py-2 rounded-lg text-base;
+    @apply font-space bg-background-secondary text-background px-4 py-2 rounded-lg text-base md:text-lg lg:text-2xl xl:text-4xl hover:transition hover:duration-400 hover:ease-in-out hover:bg-transparent hover:text-background-secondary border-2 border-background-secondary;
   }
 }
