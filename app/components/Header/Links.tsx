@@ -11,26 +11,26 @@ export default function Links() {
       <div className="w-[2px] h-40 md:h-44 xl:h-50 2xl:h-70 bg-primary"></div>
 
       {/* Images stacked vertically */}
-      <a href="https://www.linkedin.com/in/craig-sampson15/">
+      <a href="https://www.linkedin.com/in/craig-sampson15/" target="_blank" rel="noopener noreferrer">
         <Image
           src={LinkedIn}
           alt="LinkedIn"
           width={100}
           height={100}
-          className="size-14 lg:size-18 rounded-lg"
+          className="size-14 lg:size-18 icon-style"
         />
       </a>
-      <a href="https://github.com/csam15">
+      <a href="https://github.com/csam15" target="_blank" rel="noopener noreferrer">
         <Image
           src={Github}
           alt="Github"
           width={100}
           height={100}
-          className="size-14 rounded-lg lg:size-18"
+          className="size-14 lg:size-18 icon-style"
         />
       </a>
-      <a href="mailto:craigsampson15@gmail.com" className="cursor-pointer">
-        <Mail className="size-12 rounded-lg lg:size-16"style={{ color: 'var(--color-primary)' }}/>
+      <a href="mailto:craigsampson15@gmail.com" className="cursor-pointer" target="_blank" rel="noopener noreferrer">
+        <Mail className="size-12 lg:size-16 icon-style" style={{ color: 'var(--color-primary)' }} />
       </a>
     </div>
   );

@@ -9,7 +9,7 @@ import { Mail } from "lucide-react";
 
 export default function Header() {
   return (
-    <header className="w-full h-20 lg:h-25 z-50 ml-auto">
+    <header className="w-full h-20 lg:h-25 z-50 ">
       <div className="flex items-center justify-end pr-4 h-full border-b-2 border-primary">
         <div className="2xl:mr-6">
           <Button link="/contact" label="CONTACT" />

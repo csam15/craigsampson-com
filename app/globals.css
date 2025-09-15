@@ -18,4 +18,7 @@
   .button-style {
     @apply font-space bg-background-secondary text-background px-4 py-2 rounded-lg text-base md:text-lg lg:text-2xl xl:text-4xl hover:transition hover:duration-400 hover:ease-in-out hover:bg-transparent hover:text-background-secondary border-2 border-background-secondary;
   }
-}
+  .icon-style {
+    @apply rounded-lg hover:scale-[1.2] transition-transform
+  }
+} 
