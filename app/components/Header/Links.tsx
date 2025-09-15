@@ -8,7 +8,7 @@ export default function Links() {
   return (
     <div className="flex flex-col items-center space-y-2 md:space-y-2 xl:space-y-4 ">
       {/* Vertical line */}
-      <div className="w-[2px] h-40 md:h-44 xl:h-50 2xl:h-70 bg-primary"></div>
+      <div className="w-[2px] h-60 md:h-90 lg:h-135 xl:h-180 bg-primary"></div>
 
       {/* Images stacked vertically */}
       <a href="https://www.linkedin.com/in/craig-sampson15/" target="_blank" rel="noopener noreferrer">

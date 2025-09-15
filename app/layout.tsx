@@ -40,21 +40,23 @@ export default function RootLayout({
       <body
         className={`${bangers.variable} ${spaceGrotesk.variable} bg-background`}
       >
-        <div className="md:flex">
-          <div className="hidden md:flex justify-center items-center w-[6rem]">
+        {/* <div className="md:flex"> */}
+          <header className="grid grid-cols-3 md:grid-cols-[0.45fr_1fr_2fr_2fr] grid-rows-[6rem] w-full md:mt-2">
+          <div className="hidden md:flex justify-center lg:justify-end items-center w-[6rem]">
             <Links />
           </div>
-          <header className="grid grid-cols-3 md:grid-cols-[0.8fr_2fr_2fr] 2xl:grid-cols-[0.75fr_2fr_2fr] grid-rows-[auto_auto] md:-ml-6 w-full md:mt-2">
-            <div className="flex justify-center items-start">
+            <div className="flex justify-center items-start md:-ml-8 xl:-ml-12">
               <Logo />
             </div>
             <div className="col-span-2">
               <Header />
             </div>
           </header>
-          <main>{children}</main>
-          {/* <Footer /> */}
-        </div>
+        {/* </div> */}
+          <main className="">{children}</main>
+          <footer className="">
+            {/* <Footer /> */}
+          </footer>
       </body>
     </html>
   );
