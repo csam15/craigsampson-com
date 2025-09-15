@@ -12,6 +12,7 @@
   --color-secondary: #e1d8e8;
   --color-accent: #39a0ed;
   --color-error: #cf6679;
+  --color-gray: #bbccc88e;
 }
 
 @layer components {
@@ -20,5 +21,8 @@
   }
   .icon-style {
     @apply rounded-lg hover:scale-[1.2] transition-transform
+  }
+  .Project-selector-buttons {
+    @apply hover:bg-gray rounded-xl px-2 border-2;
   }
 } 

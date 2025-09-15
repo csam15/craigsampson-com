@@ -1,0 +1,3 @@
+interface ProjectDisplayProps {
+    button: String;
+}
