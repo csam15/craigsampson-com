@@ -29,7 +29,7 @@ export default function Logo() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % images.length);
-    }, 1000);
+    }, 2500);
 
     return () => clearInterval(interval);
   }, [images.length]);

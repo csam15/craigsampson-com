@@ -23,6 +23,6 @@
     @apply rounded-lg hover:scale-[1.2] transition-transform
   }
   .Project-selector-buttons {
-    @apply hover:bg-gray rounded-xl px-2 border-2;
+    @apply hover:bg-gray rounded-xl px-2 border-2 cursor-pointer;
   }
 } 

@@ -11,7 +11,7 @@ export default function ProjectSelector() {
 
   return (
     <>
-      <div className="flex flex-col sm:items-end gap-3 font-space text-2xl text-primary">
+      <div className="flex flex-col sm:items-end gap-3 font-space text-xl lg:text-2xl 2xl:text-3xl text-primary">
         <div>
           <button
             className={`Project-selector-buttons ${selectedProject === "FSD" ? "bg-gray text-accent border-gray" : ""}`}
