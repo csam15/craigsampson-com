@@ -2,7 +2,6 @@ import Button from "../Buttons/Button";
 
 import LinkedIn from "../../../public/linkedin.svg";
 import Github from "../../../public/github.png";
-import mail from "../../../public/mail.png";
 
 import Image from "next/image";
 import { Mail } from "lucide-react";

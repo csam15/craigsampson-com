@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 export default function ProjectSelector() {
-  const [selectedProject, setSelectedProject] = useState<string | null>(null);
+  const [selectedProject, setSelectedProject] = useState<string | null>("FSD");
 
   const handleProjectSelect = (project: string) => {
     setSelectedProject(project);

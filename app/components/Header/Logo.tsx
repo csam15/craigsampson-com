@@ -23,22 +23,19 @@ export default function Logo() {
 
     intervalRef.current = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % images.length);
-    }, 2000);
+    }, 1000);
   };
 
   useEffect(() => {
-    changeImage();
-    return () => {
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current);
-        intervalRef.current = null;
-      }
-    };
-  }, []);
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % images.length);
+    }, 1000);
 
+    return () => clearInterval(interval);
+  }, [images.length]);
   return (
     <>
-      <div className="flex items-center mt-4 ">
+      <div className="flex items-center mt-4 md:mt-0 2xl:mr-20 ">
         <Link href="/" className="cursor-pointer relative overflow-hidden">
           <Image
             src={images[currentImage]}
@@ -46,7 +43,7 @@ export default function Logo() {
             width={117}
             height={128}
             priority
-            className="scale-100 w-auto transition-all duration-300 ease-in-out"
+            className="size-[100px] md:size-[150px] lg:size-[200px] xl:size-[250px] 2xl:size-[300px] object-fill transition-all duration-300 ease-in-out"
           />
         </Link>
       </div>
