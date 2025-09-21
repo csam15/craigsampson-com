@@ -45,7 +45,7 @@ export default function RootLayout({
           <div className="hidden md:flex justify-center lg:justify-end items-center w-[6rem]">
             <Links />
           </div>
-            <div className="flex justify-center items-start md:-ml-8 xl:-ml-12">
+            <div className="flex justify-center items-start md:-ml-12 xl:-ml-16">
               <Logo />
             </div>
             <div className="col-span-2">

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 import image1 from "../../../public/Logo-images/3.svg";
 import image2 from "../../../public/Logo-images/4.svg";
@@ -23,23 +23,23 @@ export default function Logo() {
 
     intervalRef.current = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % images.length);
-    }, 1000);
+    }, 2000);
   };
+
+  useEffect(() => {
+    changeImage();
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+        intervalRef.current = null;
+      }
+    };
+  }, []);
 
   return (
     <>
       <div className="flex items-center mt-4 ">
-        <Link
-          href="/"
-          className="cursor-pointer relative overflow-hidden"
-          onMouseEnter={changeImage}
-          onMouseLeave={() => {
-            if (intervalRef.current) {
-              clearInterval(intervalRef.current);
-              intervalRef.current = null;
-            }
-          }}
-        >
+        <Link href="/" className="cursor-pointer relative overflow-hidden">
           <Image
             src={images[currentImage]}
             alt="Logo"
