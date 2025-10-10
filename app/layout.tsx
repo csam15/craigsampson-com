@@ -4,6 +4,8 @@ import "./globals.css";
 import Image from "next/image";
 
 import Logo from "./components/Navigation/Logo";
+import Header from "./components/Navigation/Header";
+import Footer from "./components/Footer/Footer";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -37,7 +39,13 @@ export default function RootLayout({
       <body
         className={`${outfit.variable} ${spaceGrotesk.variable} bg-background`}
       >
+        <header>
+          <Header />
+        </header>
         <main className="">{children}</main>
+        <footer>
+          <Footer />
+        </footer>
       </body>
     </html>
   );

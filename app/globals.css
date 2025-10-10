@@ -5,9 +5,9 @@
   --font-outfit: "Outfit", sans-serif;
 
   --color-background: #eafffb;
-  --color-background-secondary: #272727;
+  --color-background-secondary: #111111;
   /* --color-white: #d6d6d6; */
-  --color-primary: #4d455f;
+  --color-primary: #5e5572;
   --color-secondary: #bc78f0;
   --color-accent: #39a0ed;
   --color-error: #cf6679;
@@ -17,20 +17,20 @@
 @custom-variant hover (&:hover);
 
 h1 {
-  @apply text-xl font-outfit font-semibold tracking-wide;
+  @apply text-xl font-outfit tracking-wide;
 }
 h2 {
-  @apply text-lg font-outfit text-gray-600 whitespace-nowrap;
+  @apply text-lg font-outfit whitespace-nowrap;
+}
+h3 {
+  @apply text-base font-outfit;
+}
+p {
+  @apply text-sm md:text-lg lg:text-xl;
 }
 
-@layer components {
+@layer components { 
   .button-style {
     @apply font-space bg-background-secondary text-background px-4 py-2 rounded-lg text-base md:text-lg lg:text-2xl xl:text-4xl hover:transition hover:duration-400 hover:ease-in-out hover:bg-transparent hover:text-background-secondary border-2 border-background-secondary;
-  }
-  .icon-style {
-    @apply rounded-lg hover:scale-[1.2] transition-transform;
-  }
-  .Project-selector-buttons {
-    @apply hover:bg-gray rounded-xl px-2 border-2 cursor-pointer;
   }
 }
