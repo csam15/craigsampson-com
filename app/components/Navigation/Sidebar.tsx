@@ -1,0 +1,62 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { usePathname } from "next/navigation";
+
+import { House, FolderOpen, Wrench, UserRound, Mail } from "lucide-react";
+import MyInfo from "./Info/MyInfo";
+
+export default function Sidebar({
+  isOpen,
+  onClose,
+}: {
+  isOpen: boolean;
+  onClose: () => void;
+}) {
+  const pathname = usePathname();
+
+  const menuItems = [
+    { name: "Home", href: "/", icon: House },
+    { name: "Projects", href: "/projects", icon: FolderOpen },
+    { name: "Services", href: "/services", icon: Wrench },
+    { name: "About Me", href: "/about", icon: UserRound },
+    { name: "Contact", href: "/contact", icon: Mail },
+  ];
+
+  return (
+    <div
+      className={`
+        fixed top-0 left-0 h-full w-70 bg-white z-50 border-r border-gray-200
+        transition-transform duration-500 ease-in-out
+        ${isOpen ? "translate-x-0" : "-translate-x-full"}
+      `}
+    >
+      <div className="flex flex-col items-center justify-center gap-8 w-full p-6">
+        <div className="self-start space-y-1 xl:hidden">
+          <h1>Craig Sampson</h1>
+          <h2>Full Stack Developer</h2>
+        </div>
+        <div className="hidden xl:block">
+            <MyInfo />
+        </div>
+        <div className="flex flex-col w-full gap-4">
+          {menuItems.map((item) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              className={`flex items-center gap-2 w-full p-2.5 border border-gray-200 rounded-xl text-base font-outfit text-gray-500 hover:bg-secondary/15 ${
+                  pathname === item.href ? "bg-secondary/15 text-secondary font-bold" : ""
+                }`}
+              onClick={onClose}
+            >
+              <item.icon className="size-6" />
+              {item.name}
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
