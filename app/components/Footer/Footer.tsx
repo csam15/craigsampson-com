@@ -20,7 +20,7 @@ export default function div() {
   return (
     <div className="flex flex-col gap-5 text-background py-4 font-space bg-background-secondary px-6">
       <div className="flex flex-col justify-start gap-3 pt-4 border-b border-gray-600 pb-4">
-        <h3>Let's talk</h3>
+        <h3>Let&apos;s talk</h3>
         <a
           href="mailto:craigsampson15@gmail.com"
           className="cursor-pointer flex items-center"
