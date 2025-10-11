@@ -1,7 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
-export default function div() {
+export default function Footer() {
   const Internallinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
