@@ -6,10 +6,10 @@
   --font-outfit: "Outfit", sans-serif;
 
   /* colors */
-  --color-background: #eafffb;
+  --color-background: #f5f5f5;
   --color-background-secondary: #111111;
-  --color-primary: #5e5572;
-  --color-secondary: #bc78f0;
+  --color-primary: #71648f;
+  --color-secondary: #ab5ce7;
   --color-accent: #39a0ed;
   --color-error: #cf6679;
   --color-gray: #bbccc88e;
@@ -26,16 +26,16 @@
 @custom-variant hover (&:hover);
 
 h1 {
-  @apply font-space text-xl tracking-wide;
+  @apply text-3xl md:text-4xl lg:text-5xl font-space tracking-wide;
 }
 h2 {
-  @apply font-space text-lg whitespace-nowrap;
+  @apply text-2xl md:text-3xl font-space tracking-wide whitespace-nowrap;
 }
 h3 {
   @apply text-base font-outfit;
 }
 p {
-  @apply font-outfit text-base md:text-lg lg:text-xl;
+  @apply tracking-wide text-black font-outfit font-light text-base md:text-lg lg:text-xl;
 }
 
 @layer components { 

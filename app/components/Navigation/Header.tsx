@@ -22,7 +22,7 @@ export default function Header() {
         ></div>
       )}
       <div
-        className={`flex xl:hidden items-center justify-between w-full px-6 py-4 relative z-50`}
+        className={`flex xl:hidden items-center justify-between w-full px-6 pt-8  relative z-50`}
       >
         <div className="xl:hidden">
           <MyInfo />

@@ -3,7 +3,7 @@ import OpenToWork from "./OpenToWork";
 
 export default function Hero() {
   return (
-    <div className="flex flex-col items-start gap-9 w-full">
+    <div className="flex flex-col items-start gap-9">
       <div>
         <OpenToWork />
       </div>

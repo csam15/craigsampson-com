@@ -5,8 +5,8 @@ export default function MyInfo() {
     <div className="flex items-center justify-center gap-3">
       <Headshot />
       <div className="space-y-1">
-        <h1 className="">Craig Sampson</h1>
-        <h2 className="text-gray-600">Full Stack Developer</h2>
+        <h2 className="!text-xl font-bold !tracking-normal">Craig Sampson</h2>
+        <p className="text-gray-600 !text-lg whitespace-nowrap !tracking-normal">Full Stack Developer</p>
       </div>
     </div>
   );

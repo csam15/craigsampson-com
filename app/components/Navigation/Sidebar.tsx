@@ -33,8 +33,8 @@ export default function Sidebar({
     >
       <div className="flex flex-col items-center justify-center gap-8 w-full p-6">
         <div className="self-start space-y-1 xl:hidden">
-          <h1>Craig Sampson</h1>
-          <h2>Full Stack Developer</h2>
+          <h2 className="">Craig Sampson</h2>
+          <p>Full Stack Developer</p>
         </div>
         <div className="hidden xl:block">
             <MyInfo />

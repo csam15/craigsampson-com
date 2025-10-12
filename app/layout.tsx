@@ -38,13 +38,17 @@ export default function RootLayout({
       <body
         className={`${outfit.variable} ${spaceGrotesk.variable} bg-background`}
       >
-        <header>
-          <Header />
-        </header>
-        <main className="pt-12 xl:pl-70 px-6 xl:px-0 xl:">{children}</main>
-        <footer className="xl:ml-70">
-          <Footer />
-        </footer>
+        <div className="xl:grid xl:grid-cols-[280px_1fr]">
+          {" "}
+          {/* 280px = ml-70 equivalent */}
+          <header className="xl:col-start-1 xl:row-span-2">
+            <Header />
+          </header>
+          <main className="py-12 px-6 xl:pt-36 xl:col-start-2 max-w-[60rem] mx-auto">{children}</main>
+          <footer className="xl:col-start-2">
+            <Footer />
+          </footer>
+        </div>
       </body>
     </html>
   );
