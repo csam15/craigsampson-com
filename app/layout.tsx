@@ -8,7 +8,7 @@ import Footer from "./components/Footer/Footer";
 const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-outfit",
-  weight: ["300", "400", "600" , "700"],
+  weight: ["300", "400", "600", "700"],
   display: "swap",
 });
 
@@ -41,11 +41,10 @@ export default function RootLayout({
         <header>
           <Header />
         </header>
-        <main className="pt-12 xl:pl-72 px-6 xl:px-0">
-          {children}
-
+        <main className="pt-12 xl:pl-70 px-6 xl:px-0 xl:">{children}</main>
+        <footer className="xl:ml-70">
           <Footer />
-        </main>
+        </footer>
       </body>
     </html>
   );

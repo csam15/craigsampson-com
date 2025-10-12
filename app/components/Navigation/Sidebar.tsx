@@ -1,8 +1,6 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import { usePathname } from "next/navigation";
 
 import { House, FolderOpen, Wrench, UserRound, Mail } from "lucide-react";
@@ -28,7 +26,7 @@ export default function Sidebar({
   return (
     <div
       className={`
-        fixed top-0 left-0 h-full w-70 bg-white z-50 border-r border-gray-200
+        fixed top-0 left-0 h-full w-70 bg-background z-50 border-r border-gray-200
         transition-transform duration-500 ease-in-out
         ${isOpen ? "translate-x-0" : "-translate-x-full"}
       `}

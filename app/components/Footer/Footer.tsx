@@ -26,7 +26,7 @@ export default function Footer() {
           className="cursor-pointer flex items-center group"
         >
           <h1 className="!text-2xl">craigsampson15@gmail.com</h1>
-          <ArrowUpRight className="arrow-up-right" />
+          <ArrowUpRight className="arrow-up-right " />
         </a>
       </div>
 

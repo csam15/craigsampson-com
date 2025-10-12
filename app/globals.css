@@ -40,10 +40,10 @@ p {
 
 @layer components { 
   .primary-button {
-    @apply text-background cursor-pointer font-space bg-secondary rounded-3xl px-5 py-2 text-xl transition-transform active:scale-95;
+    @apply text-background cursor-pointer font-space bg-secondary rounded-3xl px-7 py-2 text-xl transition-transform active:scale-95;
   }
   .secondary-button {
-    @apply cursor-pointer font-space border border-gray-500 rounded-3xl px-5 py-2 text-xl transition-transform active:scale-95;
+    @apply cursor-pointer font-space border border-gray-500 rounded-3xl px-7 py-2 text-xl transition-transform active:scale-95;
   }
   .arrow-up-right {
     @apply size-6 ml-1 transition-transform duration-600 group-hover:rotate-45;
