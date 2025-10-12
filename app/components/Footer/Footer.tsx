@@ -23,33 +23,32 @@ export default function Footer() {
         <h3>Let&apos;s talk</h3>
         <a
           href="mailto:craigsampson15@gmail.com"
-          className="cursor-pointer flex items-center"
+          className="cursor-pointer flex items-center group"
         >
           <h1 className="!text-2xl">craigsampson15@gmail.com</h1>
-          <ArrowUpRight className="size-6" />
+          <ArrowUpRight className="arrow-up-right" />
         </a>
       </div>
 
-      <div className="flex items-center justify-between">
-        <div className="flex items-start justify-between gap-24 w-full">
-          <div className="flex flex-col gap-2">
-            {Internallinks.map((link) => (
-              <Link key={link.name} href={link.href}>
-                <p className="hover:text-secondary cursor-pointer">
-                  {link.name}
-                </p>
-              </Link>
-            ))}
-          </div>
-          <div className="flex flex-col gap-2">
-            {Sociallinks.map((link) => (
-              <a key={link.name} href={link.href} target="_blank" rel="noreferrer noopener">
-                <p className="hover:text-secondary cursor-pointer">
-                  {link.name}
-                </p>
-              </a>
-            ))}
-          </div>
+      <div className="flex items-start justify-between xl:justify-around gap-24 w-full">
+        <div className="flex flex-col gap-2">
+          {Internallinks.map((link) => (
+            <Link key={link.name} href={link.href}>
+              <p className="hover:text-secondary cursor-pointer">{link.name}</p>
+            </Link>
+          ))}
+        </div>
+        <div className="flex flex-col gap-2">
+          {Sociallinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <p className="hover:text-secondary cursor-pointer">{link.name}</p>
+            </a>
+          ))}
         </div>
       </div>
 

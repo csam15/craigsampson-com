@@ -1,22 +1,21 @@
 import type { Metadata } from "next";
 import { Outfit, Space_Grotesk } from "next/font/google";
 import "./globals.css";
-import Image from "next/image";
 
-import Logo from "./components/Navigation/Logo";
 import Header from "./components/Navigation/Header";
 import Footer from "./components/Footer/Footer";
 
 const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-outfit",
-  weight: "400",
+  weight: ["300", "400", "600" , "700"],
   display: "swap",
 });
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-space",
+  weight: ["300", "400", "700"],
   display: "swap",
 });
 
@@ -42,10 +41,11 @@ export default function RootLayout({
         <header>
           <Header />
         </header>
-        <main className="pt-8 xl:pl-72 px-6">{children}</main>
-        <footer>
+        <main className="pt-12 xl:pl-72 px-6 xl:px-0">
+          {children}
+
           <Footer />
-        </footer>
+        </main>
       </body>
     </html>
   );

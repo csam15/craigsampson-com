@@ -1,39 +1,51 @@
 @import "tailwindcss";
 
 @theme {
+  /* fonts */
   --font-space: "Space Grotesk", sans-serif;
   --font-outfit: "Outfit", sans-serif;
 
+  /* colors */
   --color-background: #eafffb;
   --color-background-secondary: #111111;
-  /* --color-white: #d6d6d6; */
   --color-primary: #5e5572;
   --color-secondary: #bc78f0;
   --color-accent: #39a0ed;
   --color-error: #cf6679;
   --color-gray: #bbccc88e;
+
+  /* animations */
+  --animate-rotate-90: rotate-90 0.3s ease-in-out forwards;
 }
+
+@keyframes rotate-90 {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(45deg); }
+  }
 
 @custom-variant hover (&:hover);
 
 h1 {
-  @apply text-xl font-outfit tracking-wide;
+  @apply font-space text-xl tracking-wide;
 }
 h2 {
-  @apply text-lg font-outfit whitespace-nowrap;
+  @apply font-space text-lg whitespace-nowrap;
 }
 h3 {
   @apply text-base font-outfit;
 }
 p {
-  @apply text-base md:text-lg lg:text-xl;
+  @apply font-outfit text-base md:text-lg lg:text-xl;
 }
 
 @layer components { 
   .primary-button {
-    @apply font-space bg-secondary rounded-3xl px-3 py-1 text-xl;
+    @apply text-background cursor-pointer font-space bg-secondary rounded-3xl px-5 py-2 text-xl transition-transform active:scale-95;
   }
   .secondary-button {
-    @apply font-space border border-gray-500 rounded-3xl px-3 py-1 text-xl;
+    @apply cursor-pointer font-space border border-gray-500 rounded-3xl px-5 py-2 text-xl transition-transform active:scale-95;
+  }
+  .arrow-up-right {
+    @apply size-6 ml-1 transition-transform duration-600 group-hover:rotate-45;
   }
 }
