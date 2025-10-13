@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
   }
-}
+} */
 
 @theme {
   --color-scheme: light dark;
@@ -15,6 +15,7 @@
   /* colors */
   --color-background: light-dark(#f5f5f5, #111111);
   --color-background-secondary: #111111;
+  --color-border: light-dark(#d1d5db, #374151);
   --color-primary: #71648f;
   --color-secondary: #ab5ce7;
   --color-accent: #39a0ed;
@@ -44,7 +45,7 @@ body {
 
 footer {
   background-color: #111111;
-  color:#f5f5f5;
+  color: #f5f5f5;
 }
 
 .dark footer {
@@ -63,6 +64,8 @@ footer {
 
 @custom-variant hover (&:hover);
 
+@custom-variant dark (.dark &);
+
 h1 {
   @apply text-3xl md:text-4xl lg:text-5xl font-bricolage tracking-wide;
 }
@@ -73,7 +76,7 @@ h3 {
   @apply text-base;
 }
 p {
-  @apply tracking-wide text-base md:text-lg lg:text-xl;
+  @apply tracking-wide text-base md:text-lg lg:text-xl text-gray-700 dark:text-gray-400;
 }
 
 @layer components {
@@ -81,7 +84,7 @@ p {
     @apply font-bricolage text-background cursor-pointer  bg-secondary rounded-3xl px-7 py-2 text-xl transition-transform active:scale-95;
   }
   .secondary-button {
-    @apply font-bricolage cursor-pointer  border border-gray-500 rounded-3xl px-7 py-2 text-xl transition-transform active:scale-95;
+    @apply font-bricolage cursor-pointer  border border-border rounded-3xl px-7 py-2 text-xl transition-transform active:scale-95;
   }
   .arrow-up-right {
     @apply size-6 ml-1 transition-transform duration-600 group-hover:rotate-45;

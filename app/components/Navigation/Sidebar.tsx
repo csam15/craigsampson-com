@@ -27,7 +27,7 @@ export default function Sidebar({
   return (
     <div
       className={`
-        fixed top-0 left-0 h-full w-70 bg-background font-bricolage z-50 border-r border-white
+        fixed top-0 left-0 h-full w-70 bg-background font-bricolage z-50 border-r border-border
         transition-transform duration-500 ease-in-out flex flex-col justify-between pb-15
         ${isOpen ? "translate-x-0" : "-translate-x-full"}
       `}
@@ -45,10 +45,10 @@ export default function Sidebar({
             <Link
               key={item.name}
               href={item.href}
-              className={`flex items-center gap-2 w-full p-2.5 border border-gray-200 rounded-xl text-base  text-gray-500 hover:bg-secondary/15 ${
+              className={`flex items-center gap-2 w-full p-2.5 border border-border rounded-xl text-base text-gray-500 hover:bg-secondary/15 ${
                 pathname === item.href
-                  ? "bg-secondary/15 dark:bg-primary/15 text-secondary font-bold"
-                  : ""
+                  ? "bg-secondary/15 dark:bg-secondary/15 text-secondary font-bold"
+                  : "text-gray-700 dark:text-gray-400"
               }`}
               onClick={onClose}
             >
@@ -57,8 +57,10 @@ export default function Sidebar({
             </Link>
           ))}
         </div>
+        <div className="flex self-start xl:hidden">
+          <ThemeToggle />
+        </div>
       </div>
-      <ThemeToggle />
     </div>
   );
 }

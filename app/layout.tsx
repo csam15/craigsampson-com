@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "./components/Navigation/Header";
 import Footer from "./components/Footer/Footer";
 import { ThemeProvider } from "next-themes";
+import ThemeToggle from "./components/ui/ThemeToggle";
 
 const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -38,6 +39,9 @@ export default function RootLayout({
               <Header />
             </header>
             <main className="py-12 px-6 2xl:px-0 xl:pt-36 xl:col-start-2 max-w-[70rem] mx-auto">
+              <div className="hidden xl:block fixed top-5 right-5">
+                <ThemeToggle />
+              </div>
               {children}
             </main>
             <footer className="xl:col-start-2">
