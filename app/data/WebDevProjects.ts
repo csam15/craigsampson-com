@@ -9,11 +9,33 @@ export interface WebDevProject {
   description: string;
   goals?: string[];
   technologies: string[];
+  features?: string[];
 }
 
 export const projects: WebDevProject[] = [
   {
     id: 1,
+    title: "Macstudio Nexus CRM",
+    image: ["/projects/crm.png"],
+    tags: ["Full Stack Development", "Custom Software"],
+    github: "https://github.com/Macstudio-Nexus/macstudio-nexus-crm",
+    tagline:
+      "Simple custom CRM for storing customer and lead data while also allowing for easy project management between designers and developers.",
+    description: `I developed a fully custom CRM platform designed to centralize client, project, and document management for small businesses. 
+      The system allows users to create, store, and send quotes, contracts, and invoices directly from the dashboard, with automated email delivery and organized document storage. The CRM integrates with external APIs like HubSpot to sync deal and client data, while using AWS and PostgreSQL for secure file and data storage. It features user authentication, role-based access control, and a streamlined UI built for fast project workflows.`,
+    goals: [
+      "Create a centralized platform to manage clients, projects, quotes, contracts, and invoices all in one place.",
+      "Design a clean, intuitive interface that lets users easily access and manage project-related assets like logos, color palettes, and sitemaps.",
+    ],
+    technologies: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Node.js"],
+    features: [
+      "Quote, contract, and invoice generation with PDF creation and email automation",
+      "User authentication and role-based access control",
+      "Organized project data layout for documents, design assets, and development resources",
+    ],
+  },
+  {
+    id: 2,
     title: "Google Calendar Booking App",
     image: ["/projects/google-calendar.png"],
     tags: ["Web App", "Backend Development"],
@@ -26,21 +48,7 @@ export const projects: WebDevProject[] = [
       "",
     ],
     technologies: ["Next.js", "TypeScript", "Google Calendar API", "Node.js"],
-  },
-  {
-    id: 2,
-    title: "Macstudio Nexus CRM",
-    image: ["/projects/crm.png"],
-    tags: ["Full Stack Development", "Custom Software"],
-    github: "https://github.com/Macstudio-Nexus/macstudio-nexus-crm",
-    tagline:
-      "Simple custom CRM for storing customer and lead data while also allowing for easy project management between designers and developers.",
-    description: "",
-    goals: [
-      "To allow employees to easily manage and track customer and lead information",
-      "Make storing and accessing project data simple and efficient",
-    ],
-    technologies: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Node.js"],
+    features: ["", "", ""],
   },
   {
     id: 3,

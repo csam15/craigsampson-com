@@ -67,10 +67,10 @@ footer {
 @custom-variant dark (.dark &);
 
 h1 {
-  @apply text-3xl md:text-4xl lg:text-5xl font-bricolage tracking-wide;
+  @apply text-3xl md:text-4xl lg:text-5xl font-bricolage tracking-wide font-bold;
 }
 h2 {
-  @apply text-2xl md:text-3xl font-bricolage tracking-wide whitespace-nowrap;
+  @apply text-2xl md:text-3xl font-bricolage tracking-wide whitespace-nowrap font-semibold;
 }
 h3 {
   @apply text-xl md:text-2xl font-bricolage tracking-wide;
@@ -88,5 +88,8 @@ p {
   }
   .arrow-up-right {
     @apply size-6 ml-1 transition-transform duration-600 group-hover:rotate-45;
+  }
+  .page-container {
+    @apply flex flex-col items-start gap-12 justify-start 2xl:max-w-[60rem] min-h-screen;
   }
 }
