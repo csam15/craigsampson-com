@@ -36,6 +36,8 @@ export default function Socials() {
             className="flex items-center gap-3 p-4"
           >
             <Image
+              height={100}
+              width={100}
               src={link.image}
               alt={link.name}
               className="size-12 rounded-full bg-white p-2 transition hover:scale-105"

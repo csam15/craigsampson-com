@@ -10,7 +10,9 @@ export default function HomeContact() {
           <h1 className="font-bold max-w-lg">
             I&apos;m open to new projects and roles.
           </h1>
-          <PrimaryButton label="Let&apos;s Talk" link="/contact" />
+          <div className="lg:mt-8">
+            <PrimaryButton label="Let's Talk" link="/contact" />
+          </div>
         </div>
         <Image
           src={"/question.svg"}
