@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Header from "./components/Navigation/Header";
 import Footer from "./components/Footer/Footer";
+import { ThemeProvider } from "next-themes";
 
 const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -27,23 +28,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${bricolage.variable} bg-background`}
-      >
-        <div className="xl:grid xl:grid-cols-[280px_1fr]">
-          {" "}
-          {/* 280px = ml-70 equivalent */}
-          <header className="xl:col-start-1 xl:row-span-2">
-            <Header />
-          </header>
-          <main className="py-12 px-6 2xl:px-0 xl:pt-36 xl:col-start-2 max-w-[70rem] mx-auto">
-            {children}
-          </main>
-          <footer className="xl:col-start-2">
-            <Footer />
-          </footer>
-        </div>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${bricolage.variable} bg-background`}>
+        <ThemeProvider attribute="class" defaultTheme="light">
+          <div className="xl:grid xl:grid-cols-[280px_1fr]">
+            {" "}
+            {/* 280px = ml-70 equivalent */}
+            <header className="xl:col-start-1 xl:row-span-2">
+              <Header />
+            </header>
+            <main className="py-12 px-6 2xl:px-0 xl:pt-36 xl:col-start-2 max-w-[70rem] mx-auto">
+              {children}
+            </main>
+            <footer className="xl:col-start-2">
+              <Footer />
+            </footer>
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
