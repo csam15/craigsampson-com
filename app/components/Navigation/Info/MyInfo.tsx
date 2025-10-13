@@ -6,7 +6,7 @@ export default function MyInfo() {
       <Headshot />
       <div className="space-y-1">
         <h2 className="!text-xl font-bold !tracking-normal">Craig Sampson</h2>
-        <p className="text-gray-600 !text-lg whitespace-nowrap !tracking-normal">Full Stack Developer</p>
+        <p className="text-gray-600 !text-lg whitespace-nowrap ">Full Stack Developer</p>
       </div>
     </div>
   );

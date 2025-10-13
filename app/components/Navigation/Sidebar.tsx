@@ -26,7 +26,7 @@ export default function Sidebar({
   return (
     <div
       className={`
-        fixed top-0 left-0 h-full w-70 bg-background z-50 border-r border-gray-200
+        fixed top-0 left-0 h-full w-70 bg-background font-bricolage z-50 border-r border-gray-200
         transition-transform duration-500 ease-in-out
         ${isOpen ? "translate-x-0" : "-translate-x-full"}
       `}
@@ -37,16 +37,18 @@ export default function Sidebar({
           <p>Full Stack Developer</p>
         </div>
         <div className="hidden xl:block">
-            <MyInfo />
+          <MyInfo />
         </div>
         <div className="flex flex-col w-full gap-4">
           {menuItems.map((item) => (
             <Link
               key={item.name}
               href={item.href}
-              className={`flex items-center gap-2 w-full p-2.5 border border-gray-200 rounded-xl text-base font-outfit text-gray-500 hover:bg-secondary/15 ${
-                  pathname === item.href ? "bg-secondary/15 text-secondary font-bold" : ""
-                }`}
+              className={`flex items-center gap-2 w-full p-2.5 border border-gray-200 rounded-xl text-base  text-gray-500 hover:bg-secondary/15 ${
+                pathname === item.href
+                  ? "bg-secondary/15 text-secondary font-bold"
+                  : ""
+              }`}
               onClick={onClose}
             >
               <item.icon className="size-6" />

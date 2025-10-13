@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 interface ButtonProps {
   link: string;
@@ -9,8 +10,8 @@ interface ButtonProps {
 
 export function PrimaryButton({ link, img, label }: ButtonProps) {
   return (
-    <div className="flex items-center w-fit primary-button group">
-      <a href={link} className="flex items-center">
+    <div className="flex items-center w-fit h-fit primary-button group">
+      <Link href={link} className="flex items-center">
         {img ? (
           <Image
             src={img}
@@ -21,7 +22,7 @@ export function PrimaryButton({ link, img, label }: ButtonProps) {
           />
         ) : null}
         {label}
-      </a>
+      </Link>
       <ArrowUpRight className="arrow-up-right" />
     </div>
   );
@@ -29,8 +30,8 @@ export function PrimaryButton({ link, img, label }: ButtonProps) {
 
 export function SecondaryButton({ link, img, label }: ButtonProps) {
   return (
-    <div className="flex items-center w-fit secondary-button group">
-      <a href={link} className="flex items-center">
+    <div className="flex items-center w-fit h-fit secondary-button group">
+      <Link href={link} className="flex items-center">
         {img ? (
           <Image
             src={img}
@@ -41,7 +42,7 @@ export function SecondaryButton({ link, img, label }: ButtonProps) {
           />
         ) : null}
         {label}
-      </a>
+      </Link>
       <ArrowUpRight className="arrow-up-right" />
     </div>
   );

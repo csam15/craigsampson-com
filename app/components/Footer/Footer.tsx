@@ -18,7 +18,7 @@ export default function Footer() {
   ];
 
   return (
-    <div className="flex flex-col gap-5 text-background py-4 font-space bg-background-secondary px-6">
+    <div className="flex flex-col gap-5 text-background py-4  bg-background-secondary px-6">
       <div className="flex flex-col justify-start gap-3 pt-4 border-b border-gray-600 pb-4">
         <h3>Let&apos;s talk</h3>
         <a
@@ -30,7 +30,7 @@ export default function Footer() {
         </a>
       </div>
 
-      <div className="flex items-start justify-between xl:justify-around gap-24 w-full">
+      <div className="flex items-start justify-between text-white xl:justify-around gap-24 w-full">
         <div className="flex flex-col gap-2">
           {Internallinks.map((link) => (
             <Link key={link.name} href={link.href}>

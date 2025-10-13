@@ -1,21 +1,14 @@
 import type { Metadata } from "next";
-import { Outfit, Space_Grotesk } from "next/font/google";
+import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 
 import Header from "./components/Navigation/Header";
 import Footer from "./components/Footer/Footer";
 
-const outfit = Outfit({
+const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
-  variable: "--font-outfit",
+  variable: "--",
   weight: ["300", "400", "600", "700"],
-  display: "swap",
-});
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-space",
-  weight: ["300", "400", "700"],
   display: "swap",
 });
 
@@ -36,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${outfit.variable} ${spaceGrotesk.variable} bg-background`}
+        className={`${bricolage.variable} bg-background`}
       >
         <div className="xl:grid xl:grid-cols-[280px_1fr]">
           {" "}
@@ -44,7 +37,9 @@ export default function RootLayout({
           <header className="xl:col-start-1 xl:row-span-2">
             <Header />
           </header>
-          <main className="py-12 px-6 xl:pt-36 xl:col-start-2 max-w-[60rem] mx-auto">{children}</main>
+          <main className="py-12 px-6 2xl:px-0 xl:pt-36 xl:col-start-2 max-w-[70rem] mx-auto">
+            {children}
+          </main>
           <footer className="xl:col-start-2">
             <Footer />
           </footer>
