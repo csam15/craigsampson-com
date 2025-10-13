@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Socials() {
   const Sociallinks = [
     {
@@ -33,7 +35,7 @@ export default function Socials() {
             rel="noopener noreferrer"
             className="flex items-center gap-3 p-4"
           >
-            <img
+            <Image
               src={link.image}
               alt={link.name}
               className="size-12 rounded-full bg-white p-2 transition hover:scale-105"

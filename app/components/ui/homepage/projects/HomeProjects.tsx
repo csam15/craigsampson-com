@@ -1,4 +1,4 @@
-import { SecondaryButton } from "../../Buttons/Button";
+import { SecondaryButton } from "../../../Buttons/Button";
 import HomeProjectsCard from "./HomeProjectscard";
 
 export default function HomeProjects() {

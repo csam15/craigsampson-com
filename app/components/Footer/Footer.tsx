@@ -34,7 +34,7 @@ export default function Footer() {
         <div className="flex flex-col gap-2">
           {Internallinks.map((link) => (
             <Link key={link.name} href={link.href}>
-              <p className="hover:text-secondary cursor-pointer">{link.name}</p>
+              <p className="!text-white dark:!text-black cursor-pointer">{link.name}</p>
             </Link>
           ))}
         </div>
@@ -46,14 +46,14 @@ export default function Footer() {
               target="_blank"
               rel="noreferrer noopener"
             >
-              <p className="hover:text-secondary cursor-pointer">{link.name}</p>
+              <p className="!text-white dark:!text-black cursor-pointer">{link.name}</p>
             </a>
           ))}
         </div>
       </div>
 
       <div className="container xl:mx-auto xl:text-center border-t border-border">
-        <p className=" mt-2">
+        <p className="!text-gray-400 dark:!text-gray-600 mt-2">
           &copy; {new Date().getFullYear()} Craig Sampson. All rights reserved.
         </p>
       </div>
