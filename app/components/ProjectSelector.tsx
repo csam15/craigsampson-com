@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 
+import WebDev from "./WebDev";
+
 export default function ProjectSelector() {
   const [selectedProject, setSelectedProject] = useState<string | null>("FSD");
 
@@ -39,10 +41,7 @@ export default function ProjectSelector() {
       </div>
       <div className="h-screen border-2 border-background-secondary mt-4 w-full sm:w-[calc(100%-6rem)]">
         {selectedProject === "FSD" && (
-          <div>
-            <h2>Full Stack Developer</h2>
-            <p>Details about the Full Stack Developer project...</p>
-          </div>
+          <WebDev/>
         )}
         {selectedProject === "ET" && (
           <div>
