@@ -46,7 +46,11 @@ export default function Sidebar({
               key={item.name}
               href={item.href}
               className={`flex items-center gap-2 w-full p-2.5 border border-border rounded-xl text-base text-gray-500 hover:bg-secondary/15 ${
-                pathname === item.href
+                (
+                  item.href === "/"
+                    ? pathname === item.href
+                    : pathname.startsWith(item.href)
+                )
                   ? "bg-secondary/15 dark:bg-secondary/15 text-secondary font-bold"
                   : "text-gray-700 dark:text-gray-400"
               }`}

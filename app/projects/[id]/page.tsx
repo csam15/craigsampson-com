@@ -19,15 +19,15 @@ export default async function ProjectPage({
         </p>
         <h1>{project?.title}</h1>
         <p>{project?.tagline}</p>
-        <div className="bg-secondary/10 dark:bg-primary/20 flex justify-center rounded-2xl px-8 pt-6 overflow-hidden w-full h-full">
+        {/* <div className="bg-secondary/10 dark:bg-primary/20 flex justify-center rounded-2xl px-8 pt-6 overflow-hidden w-full"> */}
           <Image
             src={project?.image[0] ?? "Image not found"}
             alt={project?.title ?? "Project Image"}
             width={600}
             height={400}
-            className="object-cover -mb-1 self-center"
+            className="-mb-1 self-center"
           />
-        </div>
+        {/* </div> */}
         <div className="flex flex-wrap gap-3">
           {project?.tags.map((tag, index) => (
             <span

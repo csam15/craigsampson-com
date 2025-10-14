@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function HomeContact() {
   return (
-    <div className="w-full h-fit border border-border bg bg-secondary/10 dark:bg-primary/20 p-6 rounded-3xl">
+    <div className="w-full h-fit border border-border bg bg-secondary/10 dark:bg-black/70 p-6 rounded-3xl">
       <div className="flex flex-col lg:flex-row gap-6">
         <div className="flex flex-col gap-4">
           <h3>Want to discuss an opportunity?</h3>

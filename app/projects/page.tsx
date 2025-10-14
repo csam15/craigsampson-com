@@ -16,13 +16,13 @@ export default function Projects() {
               href={`/projects/${project.id}`}
               className="flex flex-col md:flex-row gap-6 border border-border rounded-2xl p-6 hover:scale-[1.01] transition-transform"
             >
-              <div className="md:w-1/3 bg-secondary/10 dark:bg-primary/20 rounded-xl overflow-hidden">
+              <div className="relative md:w-1/3 bg-secondary/10 dark:bg-primary/20 rounded-xl overflow-hidden">
                 <Image
                   src={project.image[0]}
                   alt={project.title}
-                  width={400}
-                  height={300}
-                  className="object-cover w-full h-full"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover"
                 />
               </div>
 
@@ -74,7 +74,7 @@ export default function Projects() {
                   alt={project.title}
                   width={400}
                   height={300}
-                  className="object-cover w-full h-full"
+                  className=""
                 />
               </div>
 
