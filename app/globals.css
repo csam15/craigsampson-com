@@ -38,6 +38,14 @@ body {
   color: #000000;
 }
 
+table, th, td {
+  border: 1px solid black;
+}
+
+th {
+  @apply text-white bg-black;
+}
+
 .dark body {
   background-color: #111111 !important;
   color: #f5f5f5;
@@ -91,5 +99,11 @@ p {
   }
   .page-container {
     @apply flex flex-col items-start gap-12 justify-start 2xl:max-w-[60rem] min-h-screen;
+  }
+  .quote-header {
+    @apply bg-black text-white border-1 border-black w-full;
+  }
+  .quote-cell {
+    @apply py-1 place-self-center w-full h-full border-x border-b border-black text-sm;
   }
 }
