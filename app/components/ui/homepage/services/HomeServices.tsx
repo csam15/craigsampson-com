@@ -5,13 +5,17 @@ import {
   TabletSmartphone,
 } from "lucide-react";
 import HomeServicesCard from "./HomeServicesCard";
+import { SecondaryButton } from "@/app/components/Buttons/Button";
 
 export default function HomeServices() {
   return (
     <div className="space-y-4 w-full">
-      <div className="">
-        <h1 className="font-semibold">Services I Provide</h1>
-        <p>Turning problems into practical solutions.</p>
+      <div className="flex flex-col md:flex-row items-start gap-4 justify-between w-full">
+        <div className="">
+          <h1 className="font-semibold">Services I Provide</h1>
+          <p>Turning problems into practical solutions.</p>
+        </div>
+        <SecondaryButton label="See All" link="/services" />
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 ">
         <HomeServicesCard
