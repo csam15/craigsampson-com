@@ -1,11 +1,11 @@
 import { SecondaryButton } from "../../../Buttons/Button";
 import HomeProjectsCard from "./HomeProjectscard";
-import { projects } from "@/app/data/WebDevProjects";
+import { wProjects } from "@/app/data/WebDevProjects";
 
 export default function HomeProjects() {
-  const google = projects.find((project) => project.id === 1);
-  const crm = projects.find((project) => project.id === 2);
-  const kalshi = projects.find((project) => project.id === 3);
+  const google = wProjects.find((project) => project.id === 1);
+  const crm = wProjects.find((project) => project.id === 2);
+  const kalshi = wProjects.find((project) => project.id === 3);
   return (
     <div className="space-y-4 w-full">
       <div className="flex flex-col md:flex-row items-start gap-4 justify-between w-full">

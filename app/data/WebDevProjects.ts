@@ -12,7 +12,7 @@ export interface WebDevProject {
   features?: string[];
 }
 
-export const projects: WebDevProject[] = [
+export const wProjects: WebDevProject[] = [
   {
     id: 1,
     title: "Macstudio Nexus CRM",

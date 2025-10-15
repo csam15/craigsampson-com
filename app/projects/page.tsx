@@ -1,5 +1,5 @@
-import { projects } from "@/app/data/WebDevProjects";
-import { calligraphyProjects } from "../data/CalligraphyProjects";
+import { wProjects } from "@/app/data/WebDevProjects";
+import { cProjects } from "../data/CalligraphyProjects";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -10,15 +10,16 @@ export default function Projects() {
         <h1 className="mb-8">Projects</h1>
         <div className="space-y-8">
           <h2>Web Development & Software Projects</h2>
-          {projects.map((project) => (
+          {wProjects.map((project) => (
             <Link
               key={project.id}
-              href={`/projects/${project.id}`}
-              className="flex flex-col md:flex-row gap-6 border border-border rounded-2xl p-6 hover:scale-[1.01] transition-transform"
+              href={`/projects/Web-development/${project.id}`}
+              className="flex flex-col md:flex-row gap-6 border border-border rounded-2xl p-6 hover:shadow-lg"
             >
               <div className="relative md:w-1/3 bg-secondary/10 dark:bg-primary/20 rounded-xl overflow-hidden">
                 <Image
                   src={project.image[0]}
+                  priority
                   alt={project.title}
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
@@ -62,22 +63,21 @@ export default function Projects() {
           ))}
 
           <h2>Calligraphy Projects</h2>
-          {calligraphyProjects.map((project) => (
+          {cProjects.map((project) => (
             <Link
               key={project.id}
-              href={`/projects/${project.id}`}
-              className="flex flex-col md:flex-row gap-6 border border-border rounded-2xl p-6 hover:scale-[1.01] transition-transform"
+              href={`/projects/calligraphy/${project.id}`}
+              className="flex flex-col md:flex-row gap-6 border border-border rounded-2xl p-6 hover:shadow-lg"
             >
               <div className="md:w-1/3 bg-secondary/10 dark:bg-primary/20 rounded-xl overflow-hidden">
                 <Image
-                  src={project.image}
+                  src={project.image[0]}
                   alt={project.title}
                   width={400}
                   height={300}
                   className=""
                 />
               </div>
-
               <div className="flex-1 flex flex-col gap-3">
                 <h2 className="!whitespace-normal">{project.title}</h2>
                 <p className="text-base">{project.tagline}</p>
@@ -92,8 +92,6 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
-
-             
               </div>
             </Link>
           ))}
