@@ -40,7 +40,7 @@ export default function Socials() {
               width={100}
               src={link.image}
               alt={link.name}
-              className="size-12 rounded-full bg-white p-2 transition hover:scale-105"
+              className="size-12 flex-shrink-0 rounded-full bg-white p-2 transition hover:scale-105"
             />
           </a>
         ))}
