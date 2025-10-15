@@ -14,12 +14,14 @@ export default async function ProjectPage({
     <div className="page-container">
       <div className="flex flex-col items-start gap-6">
         <p>
-          <Link href={"/projects"} className="hover:text-secondary">Projects</Link> &gt;{" "}
-          <span className="font-semibold">Project Details</span>
+          <Link href={"/projects"} className="hover:text-secondary">
+            Projects
+          </Link>{" "}
+          &gt; <span className="font-semibold">Project Details</span>
         </p>
         <h1>{project?.title}</h1>
         <p>{project?.tagline}</p>
-        {/* <div className="bg-secondary/10 dark:bg-primary/20 flex justify-center rounded-2xl px-8 pt-6 overflow-hidden w-full"> */}
+        <div className="project-page-image">
           <Image
             src={project?.image[0] ?? "Image not found"}
             alt={project?.title ?? "Project Image"}
@@ -27,7 +29,7 @@ export default async function ProjectPage({
             height={400}
             className="-mb-1 self-center"
           />
-        {/* </div> */}
+        </div>
         <div className="flex flex-wrap gap-3">
           {project?.tags.map((tag, index) => (
             <span
@@ -40,6 +42,18 @@ export default async function ProjectPage({
         </div>
         <h2>Project Overview</h2>
         <p className="whitespace-pre-line">{project?.description}</p>
+
+        {project?.image[1] && (
+          <div className="project-page-image">
+            <Image
+              src={project?.image[1] ?? "Image not found"}
+              alt={project?.title ?? "Project Image"}
+              width={600}
+              height={400}
+              className="max-h-[400px] w-auto -mb-1 self-center shadow-2xl"
+            />
+          </div>
+        )}
 
         <div className="flex flex-col gap-1">
           <h2 className="pb-4">Project Goals</h2>
@@ -58,6 +72,18 @@ export default async function ProjectPage({
             </p>
           ))}
         </div>
+
+        {project?.image[2] && (
+          <div className="project-page-image">
+            <Image
+              src={project?.image[2] ?? "Image not found"}
+              alt={project?.title ?? "Project Image"}
+              width={600}
+              height={400}
+              className="max-h-[400px] w-auto -mb-1 self-center shadow-2xl"
+            />
+          </div>
+        )}
       </div>
     </div>
   );

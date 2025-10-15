@@ -27,7 +27,7 @@ export default async function ProjectPage({
             alt={project?.title ?? "Project Image"}
             width={600}
             height={400}
-            className="-mb-1 self-center shadow-2xl"
+            className="max-h-[400px] w-auto -mb-1 self-center shadow-2xl"
           />
         </div>
         <div className="flex flex-wrap gap-3">
@@ -51,7 +51,7 @@ export default async function ProjectPage({
               alt={project?.title ?? "Project Image"}
               width={600}
               height={400}
-              className="-mb-1 self-center shadow-2xl"
+              className="max-h-[400px] w-auto -mb-1 self-center shadow-2xl"
             />
           </div>
         )}

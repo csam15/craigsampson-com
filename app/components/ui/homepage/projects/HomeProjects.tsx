@@ -19,20 +19,20 @@ export default function HomeProjects() {
         <div className="lg:col-span-2">
           <HomeProjectsCard
             title={crm?.title ?? "Untitled Project"}
-            image={crm?.image[0] ?? "/projects/crm.png"}
+            image={crm?.image[0] ?? "Image Not Found"}
             types={[crm?.tags[0] ?? "", crm?.tags[1] ?? ""]}
             id={crm?.id ?? 1}
           />
         </div>
         <HomeProjectsCard
           title={google?.title ?? "Untitled Project"}
-          image={google?.image[0] ?? "/projects/google.png"}
+          image={"/projects/crm.svg"}
           types={[google?.tags[0] ?? "", google?.tags[1] ?? ""]}
           id={google?.id ?? 2}
         />
         <HomeProjectsCard
           title={kalshi?.title ?? "Untitled Project"}
-          image={kalshi?.image[0] ?? "/projects/kalshi.png"}
+          image={kalshi?.image[0] ?? "Image Not Found"}
           types={[kalshi?.tags[0] ?? "", kalshi?.tags[1] ?? ""]}
           id={kalshi?.id ?? 3}
         />

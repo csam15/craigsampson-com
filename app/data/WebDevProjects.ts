@@ -16,7 +16,7 @@ export const wProjects: WebDevProject[] = [
   {
     id: 1,
     title: "Macstudio Nexus CRM",
-    image: ["/projects/crm.svg"],
+    image: ["/projects/crmLogin.png", "/projects/crm.png", "/projects/crm2.png"],
     tags: ["Full Stack Development", "Custom Software"],
     github: "https://github.com/Macstudio-Nexus/macstudio-nexus-crm",
     tagline:

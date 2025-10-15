@@ -8,22 +8,28 @@ export default function Projects() {
     <div className="page-container">
       <div className="flex flex-col items-start gap-6">
         <h1 className="mb-8">Projects</h1>
-        <div className="space-y-8">
-          <h2>Web Development & Software Projects</h2>
+        <div className="space-y-8 max-w-full w-full">
+          <h2 className="text-secondary">
+            Web Development & Software Projects
+          </h2>
           {wProjects.map((project) => (
             <Link
               key={project.id}
               href={`/projects/Web-development/${project.id}`}
               className="flex flex-col md:flex-row gap-6 border border-border rounded-2xl p-6 hover:shadow-lg"
             >
-              <div className="relative md:w-1/3 bg-secondary/10 dark:bg-primary/20 rounded-xl overflow-hidden">
+              <div className="relative md:w-1/3 min-h-[200px] md:min-h-0 bg-secondary/10 dark:bg-primary/20 rounded-xl overflow-hidden">
                 <Image
-                  src={project.image[0]}
+                  src={
+                    project.title === "Macstudio Nexus CRM"
+                      ? "/projects/crm.svg"
+                      : project.image[0]
+                  }
                   priority
                   alt={project.title}
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover"
+                  className="object-cover p-3 rounded-2xl"
                 />
               </div>
 
@@ -62,14 +68,14 @@ export default function Projects() {
             </Link>
           ))}
 
-          <h2>Calligraphy Projects</h2>
+          <h2 className="text-secondary">Calligraphy Projects</h2>
           {cProjects.map((project) => (
             <Link
               key={project.id}
               href={`/projects/calligraphy/${project.id}`}
               className="flex flex-col md:flex-row gap-6 border border-border rounded-2xl p-6 hover:shadow-lg"
             >
-              <div className="md:w-1/3 bg-secondary/10 dark:bg-primary/20 rounded-xl overflow-hidden">
+              <div className="md:w-1/3 rounded-xl overflow-hidden">
                 <Image
                   src={project.image[0]}
                   alt={project.title}
