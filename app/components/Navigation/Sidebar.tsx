@@ -27,7 +27,7 @@ export default function Sidebar({
   return (
     <div
       className={`
-        fixed top-0 left-0 h-full w-70 bg-background font-bricolage z-50 border-r border-border
+        fixed top-0 left-0 h-full w-72 bg-background font-bricolage z-50 border-r border-border
         transition-transform duration-500 ease-in-out flex flex-col justify-between pb-15
         ${isOpen ? "translate-x-0" : "-translate-x-full"}
       `}

@@ -1,7 +1,7 @@
 import { PrimaryButton } from "../../Buttons/Button";
 import Image from "next/image";
 
-export default function HomeContact() {
+export function HomeContact() {
   return (
     <div className="w-full h-fit border border-border bg bg-secondary/10 dark:bg-black/70 p-6 rounded-3xl">
       <div className="flex flex-col lg:flex-row gap-6">
@@ -21,6 +21,24 @@ export default function HomeContact() {
           height={100}
           className="size-90 md:self-end"
         />
+      </div>
+    </div>
+  );
+}
+
+export function AboutContact() {
+  return (
+    <div className="w-full h-fit border border-border bg bg-secondary/10 dark:bg-black/70 p-6 rounded-3xl">
+      <div className="flex flex-col lg:flex-row gap-6">
+        <div className="flex flex-col gap-4">
+          <h3>Want to discuss an opportunity?</h3>
+          <h1 className="font-bold max-w-lg">
+            I&apos;m open to new projects and roles.
+          </h1>
+          <div className="lg:mt-8">
+            <PrimaryButton label="Let's Talk" link="/contact" />
+          </div>
+        </div>
       </div>
     </div>
   );

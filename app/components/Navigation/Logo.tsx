@@ -1,52 +1,15 @@
-"use client";
-
 import Image from "next/image";
-import Link from "next/link";
-import { useState, useRef, useEffect } from "react";
-
-import image1 from "../../../public/Logo-images/3.svg";
-import image2 from "../../../public/Logo-images/4.svg";
-import image3 from "../../../public/Logo-images/5.svg";
-import image4 from "../../../public/Logo-images/6.svg";
-import image5 from "../../../public/Logo-images/7.svg";
-import image6 from "../../../public/Logo-images/8.svg";
-import image7 from "../../../public/Logo-images/9.svg";
 
 export default function Logo() {
-  const [currentImage, setCurrentImage] = useState(0);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
-  const images = [image1, image2, image3, image4, image5, image6, image7];
-
-  // Change image every 3 seconds
-  const changeImage = () => {
-    if (intervalRef.current) return; // Prevent multiple intervals
-
-    intervalRef.current = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % images.length);
-    }, 1000);
-  };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % images.length);
-    }, 2500);
-
-    return () => clearInterval(interval);
-  }, [images.length]);
   return (
-    <>
-      <div className="flex items-center mt-4 md:mt-0 2xl:mr-20 ">
-        <Link href="/" className="cursor-pointer relative overflow-hidden">
-          <Image
-            src={images[currentImage]}
-            alt="Logo"
-            width={117}
-            height={128}
-            priority
-            className="size-[100px] md:size-[150px] lg:size-[200px] xl:size-[250px] 2xl:size-[300px] object-fill transition-all duration-300 ease-in-out"
-          />
-        </Link>
-      </div>
-    </>
+    // <div className="bg-primary rounded-full">
+      <Image
+        src={"/Logo/CSLogoB.PNG"}
+        alt="Craig Sampson Logo"
+        width={563}
+        height={563}
+        className="size-20"
+      />
+    // </div>
   );
 }

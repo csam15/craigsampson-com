@@ -2,7 +2,7 @@ import {Mail, MapPin, Phone } from "lucide-react";
 
 export default function Info() {
   return (
-    <div className="w-full p-6 border border-border rounded-3xl">
+    <div className="w-full p-6 border border-border rounded-3xl info-page">
       <div className="w-fit flex flex-col items-start justify-center gap-9">
         <div className="flex flex-col lg:flex-row gap-9 lg:gap-18">
           <div className="flex flex-col items-start">
@@ -12,7 +12,7 @@ export default function Info() {
             </div>
             <div>
               <a href="mailto:craigsampson15@gmail.com">
-                <p className="font-semibold">craigsampson15@gmail.com</p>
+                <p className="font-semibold hover:text-secondary">craigsampson15@gmail.com</p>
               </a>
             </div>
           </div>
