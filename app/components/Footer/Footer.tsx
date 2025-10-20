@@ -18,8 +18,8 @@ export default function Footer() {
   ];
 
   return (
-    <div className="flex flex-col gap-5 py-4 px-6">
-      <div className="flex flex-col justify-start gap-3 pt-4 border-b border-border pb-4">
+    <div className="flex flex-col gap-5 py-4 px-6 bg-black dark:bg-white">
+      <div className="flex flex-col justify-start gap-3 !text-white dark:!text-black pt-4 border-b border-border pb-4">
         <h3>Let&apos;s talk</h3>
         <a
           href="mailto:craigsampson15@gmail.com"

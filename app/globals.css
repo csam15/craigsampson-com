@@ -14,10 +14,10 @@
   --color-secondary: #b972f0;
   --color-accent: #39a0ed;
   --color-error: #cf6679;
-  --color-gray: #bbccc88e;
+  --color-gray: #bbccc8;
 
   /* animations */
-  --animate-rotate-90: rotate-90 0.3s ease-in-out forwards;
+  --animate-rotate-45: rotate-45 0.3s ease-in-out forwards;
 }
 
 :root {
@@ -32,7 +32,14 @@ body {
   color: #000000;
 }
 
-table, th, td {
+.dark body {
+  background-color: #111111;
+  color: #f5f5f5;
+}
+
+table,
+th,
+td {
   border: 1px solid black;
 }
 
@@ -40,22 +47,7 @@ th {
   @apply text-white bg-black;
 }
 
-.dark body {
-  background-color: #111111 !important;
-  color: #f5f5f5;
-}
-
-footer {
-  background-color: #111111;
-  color: #f5f5f5;
-}
-
-.dark footer {
-  background-color: #f5f5f5 !important;
-  color: #111111;
-}
-
-@keyframes rotate-90 {
+@keyframes rotate-45 {
   from {
     transform: rotate(0deg);
   }
@@ -78,7 +70,7 @@ h3 {
   @apply text-xl md:text-2xl font-bricolage tracking-wide;
 }
 p {
-  @apply tracking-wide text-base md:text-lg text-gray-700 dark:text-gray-400;
+  @apply font-bricolage tracking-wide text-base md:text-lg text-gray-700 dark:text-gray-400;
 }
 
 @layer components {
@@ -88,11 +80,8 @@ p {
   .secondary-button {
     @apply font-bricolage cursor-pointer  border border-border rounded-3xl px-7 py-2 text-xl transition-transform active:scale-95;
   }
-  .arrow-up-right {
-    @apply size-6 ml-1 transition-transform duration-600 group-hover:rotate-45;
-  }
   .page-container {
-    @apply flex flex-col items-start gap-12 justify-start 2xl:max-w-[60rem] min-h-screen;
+    @apply flex flex-col items-start gap-12 justify-start mb-20 lg:mb-40 2xl:max-w-[60rem] min-h-screen;
   }
   .quote-header {
     @apply bg-black text-white border-1 border-black w-full;
@@ -103,5 +92,10 @@ p {
   .project-page-image {
     @apply bg-slate-300 dark:bg-primary/20 flex justify-center rounded-4xl px-8 pt-6 overflow-hidden w-full;
   }
- 
+}
+
+@layer utilities {
+  .arrow-up-right {
+    @apply size-6 ml-1 transition-transform duration-600 group-hover:rotate-45;
+  }
 }
