@@ -1,6 +1,54 @@
 import { wProjects } from "@/app/data/WebDevProjects";
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  const projectId = parseInt(id);
+  const project = wProjects.find((project) => project.id === projectId);
+
+  if (!project) {
+    return {
+      title: "Project Not Found - Craig Sampson",
+      description: "The requested project could not be found.",
+    };
+  }
+
+  return {
+    title: `${project.title} - Craig Sampson Portfolio`,
+    description: project.tagline,
+    openGraph: {
+      title: `${project.title} - Craig Sampson`,
+      description: project.tagline,
+      url: `https://craigsampson.com/projects/Web-development/${project.id}`,
+      siteName: "Craig Sampson",
+      images: [
+        {
+          url: `https://craigsampson.com${project.image[1] || project.image[0]}`,
+          width: 1200,
+          height: 630,
+          alt: project.title,
+        },
+      ],
+      locale: "en_US",
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.title} - Craig Sampson`,
+      description: project.tagline,
+      images: [`https://craigsampson.com${project.image[1] || project.image[0]}`],
+    },
+    alternates: {
+      canonical: `https://craigsampson.com/projects/Web-development/${project.id}`,
+    },
+  };
+}
 
 export default async function ProjectPage({
   params,

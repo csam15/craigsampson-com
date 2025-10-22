@@ -2,6 +2,37 @@ import { wProjects } from "@/app/data/WebDevProjects";
 import { cProjects } from "../data/CalligraphyProjects";
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects - Craig Sampson Portfolio | Web Development & Calligraphy",
+  description: "Explore Craig Sampson's portfolio of web development projects and calligraphy work. Full stack applications built with React, Next.js, TypeScript, and more.",
+  openGraph: {
+    title: "Projects - Craig Sampson Portfolio",
+    description: "Explore Craig Sampson's portfolio of web development projects and calligraphy work. Full stack applications built with React, Next.js, TypeScript, and more.",
+    url: "https://craigsampson.com/projects",
+    siteName: "Craig Sampson",
+    images: [
+      {
+        url: "https://craigsampson.com/favicon.svg",
+        width: 1200,
+        height: 630,
+        alt: "Craig Sampson Projects Portfolio",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Projects - Craig Sampson Portfolio",
+    description: "Explore Craig Sampson's portfolio of web development projects and calligraphy work.",
+    images: ["https://craigsampson.com/favicon.svg"],
+  },
+  alternates: {
+    canonical: "https://craigsampson.com/projects",
+  },
+};
 
 export default function Projects() {
   return (

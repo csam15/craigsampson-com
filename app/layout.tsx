@@ -22,11 +22,52 @@ const fira_mono = Fira_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://craigsampson.com"),
   title:
     "Craig Sampson - Full Stack Developer | Electronics Repair | Calligraphy Artist",
-  description: "Craig Sampson | Full Stack Developer & Creative Professional",
+  description:
+    "Craig Sampson is a full stack developer specializing in React, Next.js, and TypeScript. Also offering electronics repair and custom calligraphy services.",
+  keywords: [
+    "full stack developer",
+    "web developer",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "electronics repair",
+    "calligraphy",
+    "Craig Sampson",
+  ],
+  authors: [{ name: "Craig Sampson" }],
+  creator: "Craig Sampson",
+  openGraph: {
+    title: "Craig Sampson - Full Stack Developer & Creative Professional",
+    description:
+      "Full stack developer specializing in React, Next.js, and TypeScript. Also offering electronics repair and custom calligraphy services.",
+    url: "https://craigsampson.com",
+    siteName: "Craig Sampson",
+    images: [
+      {
+        url: "https://craigsampson.com/favicon.svg",
+        width: 1200,
+        height: 630,
+        alt: "Craig Sampson",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Craig Sampson - Full Stack Developer & Creative Professional",
+    description:
+      "Full stack developer specializing in React, Next.js, and TypeScript.",
+    images: ["https://craigsampson.com/favicon.svg"],
+  },
   icons: {
     icon: "/favicon.svg",
+  },
+  alternates: {
+    canonical: "https://craigsampson.com",
   },
 };
 

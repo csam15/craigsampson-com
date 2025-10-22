@@ -1,5 +1,36 @@
 import Image from "next/image";
 import { AboutContact } from "../components/ui/homepage/CallToAction";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Craig Sampson - Full Stack Developer & Creative Professional",
+  description: "Learn about Craig Sampson's journey from robotics to full stack web development. Specializing in React, Next.js, and modern web technologies. Also offering electronics repair and calligraphy services.",
+  openGraph: {
+    title: "About Craig Sampson - Full Stack Developer & Creative Professional",
+    description: "Learn about Craig Sampson's journey from robotics to full stack web development. Specializing in React, Next.js, and modern web technologies.",
+    url: "https://craigsampson.com/about",
+    siteName: "Craig Sampson",
+    images: [
+      {
+        url: "https://craigsampson.com/favicon.svg",
+        width: 1200,
+        height: 630,
+        alt: "Craig Sampson - Full Stack Developer",
+      },
+    ],
+    locale: "en_US",
+    type: "profile",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Craig Sampson - Full Stack Developer & Creative Professional",
+    description: "Learn about Craig Sampson's journey from robotics to full stack web development.",
+    images: ["https://craigsampson.com/favicon.svg"],
+  },
+  alternates: {
+    canonical: "https://craigsampson.com/about",
+  },
+};
 
 export default function About() {
   return (
@@ -86,7 +117,7 @@ export default function About() {
         </div>
         <div className="self-center">
           <Image
-            src={"/bjj.jpeg"}
+            src={"/bjj.JPEG"}
             alt="Craig Sampson BJJ"
             width={2071}
             height={4086}

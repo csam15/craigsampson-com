@@ -3,6 +3,37 @@ import Link from "next/link";
 import { PrimaryButton } from "../components/Buttons/Button";
 import { skills } from "../data/Skills";
 import { Minus } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Services - Web Development, Electronics Repair & Calligraphy | Craig Sampson",
+  description: "Professional services offered by Craig Sampson: Full stack web development with React & Next.js, electronics repair for consumer devices, and custom calligraphy & design work.",
+  openGraph: {
+    title: "Services - Web Development, Electronics Repair & Calligraphy",
+    description: "Full stack web development, electronics repair, and custom calligraphy services by Craig Sampson. Building fast, secure, and user-friendly digital experiences.",
+    url: "https://craigsampson.com/services",
+    siteName: "Craig Sampson",
+    images: [
+      {
+        url: "https://craigsampson.com/favicon.svg",
+        width: 1200,
+        height: 630,
+        alt: "Craig Sampson Services",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Services - Web Development, Electronics Repair & Calligraphy",
+    description: "Full stack web development, electronics repair, and custom calligraphy services by Craig Sampson.",
+    images: ["https://craigsampson.com/favicon.svg"],
+  },
+  alternates: {
+    canonical: "https://craigsampson.com/services",
+  },
+};
 
 export default function Projects() {
   return (
