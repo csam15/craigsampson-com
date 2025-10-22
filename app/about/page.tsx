@@ -10,14 +10,6 @@ export const metadata: Metadata = {
     description: "Learn about Craig Sampson's journey from robotics to full stack web development. Specializing in React, Next.js, and modern web technologies.",
     url: "https://craigsampson.com/about",
     siteName: "Craig Sampson",
-    images: [
-      {
-        url: "https://craigsampson.com/favicon.svg",
-        width: 1200,
-        height: 630,
-        alt: "Craig Sampson - Full Stack Developer",
-      },
-    ],
     locale: "en_US",
     type: "profile",
   },
@@ -25,7 +17,6 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "About Craig Sampson - Full Stack Developer & Creative Professional",
     description: "Learn about Craig Sampson's journey from robotics to full stack web development.",
-    images: ["https://craigsampson.com/favicon.svg"],
   },
   alternates: {
     canonical: "https://craigsampson.com/about",
@@ -117,7 +108,7 @@ export default function About() {
         </div>
         <div className="self-center">
           <Image
-            src={"/bjj.JPEG"}
+            src={"/bjj.JPG"}
             alt="Craig Sampson BJJ"
             width={2071}
             height={4086}

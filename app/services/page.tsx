@@ -13,14 +13,6 @@ export const metadata: Metadata = {
     description: "Full stack web development, electronics repair, and custom calligraphy services by Craig Sampson. Building fast, secure, and user-friendly digital experiences.",
     url: "https://craigsampson.com/services",
     siteName: "Craig Sampson",
-    images: [
-      {
-        url: "https://craigsampson.com/favicon.svg",
-        width: 1200,
-        height: 630,
-        alt: "Craig Sampson Services",
-      },
-    ],
     locale: "en_US",
     type: "website",
   },
@@ -28,7 +20,6 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Services - Web Development, Electronics Repair & Calligraphy",
     description: "Full stack web development, electronics repair, and custom calligraphy services by Craig Sampson.",
-    images: ["https://craigsampson.com/favicon.svg"],
   },
   alternates: {
     canonical: "https://craigsampson.com/services",

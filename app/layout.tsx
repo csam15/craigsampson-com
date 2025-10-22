@@ -45,14 +45,6 @@ export const metadata: Metadata = {
       "Full stack developer specializing in React, Next.js, and TypeScript. Also offering electronics repair and custom calligraphy services.",
     url: "https://craigsampson.com",
     siteName: "Craig Sampson",
-    images: [
-      {
-        url: "https://craigsampson.com/favicon.svg",
-        width: 1200,
-        height: 630,
-        alt: "Craig Sampson",
-      },
-    ],
     locale: "en_US",
     type: "website",
   },
@@ -61,7 +53,6 @@ export const metadata: Metadata = {
     title: "Craig Sampson - Full Stack Developer & Creative Professional",
     description:
       "Full stack developer specializing in React, Next.js, and TypeScript.",
-    images: ["https://craigsampson.com/favicon.svg"],
   },
   icons: {
     icon: "/favicon.svg",

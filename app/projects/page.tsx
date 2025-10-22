@@ -12,14 +12,6 @@ export const metadata: Metadata = {
     description: "Explore Craig Sampson's portfolio of web development projects and calligraphy work. Full stack applications built with React, Next.js, TypeScript, and more.",
     url: "https://craigsampson.com/projects",
     siteName: "Craig Sampson",
-    images: [
-      {
-        url: "https://craigsampson.com/favicon.svg",
-        width: 1200,
-        height: 630,
-        alt: "Craig Sampson Projects Portfolio",
-      },
-    ],
     locale: "en_US",
     type: "website",
   },
@@ -27,7 +19,6 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Projects - Craig Sampson Portfolio",
     description: "Explore Craig Sampson's portfolio of web development projects and calligraphy work.",
-    images: ["https://craigsampson.com/favicon.svg"],
   },
   alternates: {
     canonical: "https://craigsampson.com/projects",

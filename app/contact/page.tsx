@@ -11,14 +11,6 @@ export const metadata: Metadata = {
     description: "Get in touch with Craig Sampson for web development projects, electronics repair, or custom calligraphy work.",
     url: "https://craigsampson.com/contact",
     siteName: "Craig Sampson",
-    images: [
-      {
-        url: "https://craigsampson.com/favicon.svg",
-        width: 1200,
-        height: 630,
-        alt: "Contact Craig Sampson",
-      },
-    ],
     locale: "en_US",
     type: "website",
   },
@@ -26,7 +18,6 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Contact Craig Sampson - Let's Work Together",
     description: "Get in touch with Craig Sampson for web development projects, electronics repair, or custom calligraphy work.",
-    images: ["https://craigsampson.com/favicon.svg"],
   },
   alternates: {
     canonical: "https://craigsampson.com/contact",
