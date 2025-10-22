@@ -15,7 +15,7 @@ export default function HomeProjectsCard({
   return (
     <Link
       href={"/projects/Web-development/" + id}
-      className="bg-background border w-full h-full border-border gap-4 flex flex-col rounded-3xl px-2 pt-2 pb-6 hover:scale-[1.005] "
+      className="bg-background border w-full h-full border-border gap-4 flex flex-col rounded-3xl px-2 pt-2 pb-6 button-click "
     >
       {/* <div className="bg-secondary/10 dark:bg-primary/20 flex justify-center rounded-2xl px-8 pt-12 overflow-hidden w-full h-full"> */}
       <Image

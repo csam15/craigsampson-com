@@ -12,7 +12,7 @@ export default function HomeServices() {
     <div className="space-y-4 w-full">
       <div className="flex flex-col md:flex-row items-start gap-4 justify-between w-full">
         <div className="">
-          <h1 className="font-semibold">Services I Provide</h1>
+          <h1 className="font-semibold">How I can help</h1>
           <p>Turning problems into practical solutions.</p>
         </div>
         <SecondaryButton label="See All" link="/services" />

@@ -13,12 +13,12 @@ export default function Hero() {
           Hello there! I&apos;m Craig
         </h1>
         <h2 className="! !text-3xl font-semibold">Full Stack Developer</h2>
-        <p className="text-gray-500 font-light">
-          Full Stack Developer eager to learn, grow, and contribute to impactful
+        {/* <p className="text-gray-500 font-light">
+          Eager to learn, grow, and contribute to impactful
           projects.
-        </p>
+        </p> */}
       </div>
-      <div className="flex flex-col sm:flex-row items-start lg:items-center gap-4 w-full">
+      <div className="flex flex-col sm:flex-row items-start lg:items-end gap-4 w-full">
         <PrimaryButton label="About Me" link="/about" />
         <SecondaryButton label="See My Work" link="/projects" />
         <div className="ml-auto hidden lg:flex">

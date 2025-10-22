@@ -23,7 +23,7 @@ export default async function ProjectPage({
         <p>{project?.tagline}</p>
         <div className="project-page-image">
           <Image
-            src={project?.image[0] ?? "Image not found"}
+            src={project?.image[1] ?? "Image not found"}
             alt={project?.title ?? "Project Image"}
             width={600}
             height={400}
@@ -43,10 +43,10 @@ export default async function ProjectPage({
         <h2>Project Overview</h2>
         <p className="whitespace-pre-line">{project?.description}</p>
 
-        {project?.image[1] && (
+        {project?.image[2] && (
           <div className="project-page-image">
             <Image
-              src={project?.image[1] ?? "Image not found"}
+              src={project?.image[2] ?? "Image not found"}
               alt={project?.title ?? "Project Image"}
               width={600}
               height={400}
@@ -73,10 +73,10 @@ export default async function ProjectPage({
           ))}
         </div>
 
-        {project?.image[2] && (
+        {project?.image[3] && (
           <div className="project-page-image">
             <Image
-              src={project?.image[2] ?? "Image not found"}
+              src={project?.image[3] ?? "Image not found"}
               alt={project?.title ?? "Project Image"}
               width={600}
               height={400}

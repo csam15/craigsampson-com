@@ -3,8 +3,8 @@ import HomeProjectsCard from "./HomeProjectscard";
 import { wProjects } from "@/app/data/WebDevProjects";
 
 export default function HomeProjects() {
-  const google = wProjects.find((project) => project.id === 1);
-  const crm = wProjects.find((project) => project.id === 2);
+  const crm = wProjects.find((project) => project.id === 1);
+  const google = wProjects.find((project) => project.id === 2);
   const kalshi = wProjects.find((project) => project.id === 3);
   return (
     <div className="space-y-4 w-full">
@@ -26,7 +26,7 @@ export default function HomeProjects() {
         </div>
         <HomeProjectsCard
           title={google?.title ?? "Untitled Project"}
-          image={"/projects/crm.svg"}
+          image={google?.image[0] ?? "Image not found"}
           types={[google?.tags[0] ?? "", google?.tags[1] ?? ""]}
           id={google?.id ?? 2}
         />

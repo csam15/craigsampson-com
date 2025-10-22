@@ -16,7 +16,12 @@ export const wProjects: WebDevProject[] = [
   {
     id: 1,
     title: "Macstudio Nexus CRM",
-    image: ["/projects/crmLogin.png", "/projects/crm.png", "/projects/crm2.png"],
+    image: [
+      "/projects/crm.svg",
+      "/projects/crmLogin.png",
+      "/projects/crm.png",
+      "/projects/crm2.png",
+    ],
     tags: ["Full Stack Development", "Custom Software"],
     github: "https://github.com/Macstudio-Nexus/macstudio-nexus-crm",
     tagline:
@@ -37,7 +42,7 @@ export const wProjects: WebDevProject[] = [
   {
     id: 2,
     title: "Google Calendar Booking App",
-    image: ["/projects/google2.svg"],
+    image: ["/projects/google2.svg", "/projects/google.svg"],
     tags: ["Web App", "Backend Development"],
     github: "https://github.com/csam15/Google-Calendar-Booking",
     tagline:
@@ -53,7 +58,7 @@ export const wProjects: WebDevProject[] = [
   {
     id: 3,
     title: "Kalshi Trading Bot",
-    image: ["/projects/kalshi2.svg"],
+    image: ["/projects/kalshi2.svg", "/projects/kalshi.svg"],
     tags: ["Backend Development", "Automation"],
     github: "https://github.com/csam15/Kalshi-Trading-Bot",
     tagline:

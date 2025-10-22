@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque } from "next/font/google";
+import { Bricolage_Grotesque, Fira_Mono } from "next/font/google";
 import "./globals.css";
 
 import Header from "./components/Navigation/Header";
@@ -11,6 +11,13 @@ const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
   variable: "--",
   weight: ["300", "400", "600", "700"],
+  display: "swap",
+});
+
+const fira_mono = Fira_Mono({
+  subsets: ["latin"],
+  variable: "--",
+  weight: ["400", "500", "700"],
   display: "swap",
 });
 
@@ -30,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${bricolage.variable} bg-background`}>
+      <body className={`${bricolage.variable} ${fira_mono.variable} bg-background`}>
         <ThemeProvider attribute="class" defaultTheme="light">
           <div className="xl:grid xl:grid-cols-[280px_1fr]">
             {" "}
