@@ -57,7 +57,7 @@ export default function Sidebar({
               onClick={onClose}
             >
               <item.icon className="size-6" />
-              {item.name}
+              <span className="!font-fira !font-medium">{item.name}</span>
             </Link>
           ))}
         </div>

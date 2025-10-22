@@ -4,10 +4,12 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About Craig Sampson - Full Stack Developer & Creative Professional",
-  description: "Learn about Craig Sampson's journey from robotics to full stack web development. Specializing in React, Next.js, and modern web technologies. Also offering electronics repair and calligraphy services.",
+  description:
+    "Learn about Craig Sampson's journey from robotics to full stack web development. Specializing in React, Next.js, and modern web technologies. Also offering electronics repair and calligraphy services.",
   openGraph: {
     title: "About Craig Sampson - Full Stack Developer & Creative Professional",
-    description: "Learn about Craig Sampson's journey from robotics to full stack web development. Specializing in React, Next.js, and modern web technologies.",
+    description:
+      "Learn about Craig Sampson's journey from robotics to full stack web development. Specializing in React, Next.js, and modern web technologies.",
     url: "https://craigsampson.com/about",
     siteName: "Craig Sampson",
     locale: "en_US",
@@ -16,7 +18,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "About Craig Sampson - Full Stack Developer & Creative Professional",
-    description: "Learn about Craig Sampson's journey from robotics to full stack web development.",
+    description:
+      "Learn about Craig Sampson's journey from robotics to full stack web development.",
   },
   alternates: {
     canonical: "https://craigsampson.com/about",
@@ -27,7 +30,10 @@ export default function About() {
   return (
     <div className="page-container">
       <div className="space-y-6 lg:space-y-8">
-        <h1>Hello There. I&apos;m Craig Sampson</h1>
+        <h1>
+          <span title="General Kenobi">Hello There.</span> I&apos;m Craig
+          Sampson
+        </h1>
         <p>
           Full stack developer passionate about building intuitive, efficient
           web applications.

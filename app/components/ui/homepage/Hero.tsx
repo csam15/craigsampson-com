@@ -10,7 +10,7 @@ export default function Hero() {
       </div>
       <div className="flex flex-col gap-4 w-full">
         <h1 className=" !text-5xl lg:!text-6xl xl:!text-7xl font-bold">
-          Hello there! I&apos;m Craig
+          <span title="General Kenobi">Hello There!</span> I&apos;m Craig
         </h1>
         <h2 className="! !text-3xl font-semibold">Full Stack Developer</h2>
         {/* <p className="text-gray-500 font-light">
