@@ -21,7 +21,7 @@ export const wProjects: WebDevProject[] = [
     image: [
       "/projects/crm.svg",
       "/projects/crmLogin.png",
-      "/projects/crm.png",
+      "/projects/crm.svg",
       "/projects/crm2.png",
     ],
     tags: ["Full Stack Development", "Custom Software"],

@@ -108,7 +108,7 @@ export default function About() {
         </div>
         <div className="self-center">
           <Image
-            src={"/bjj.JPG"}
+            src={"/bjj.jpg"}
             alt="Craig Sampson BJJ"
             width={2071}
             height={4086}
