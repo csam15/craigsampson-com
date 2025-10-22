@@ -4,7 +4,7 @@ export default function Logo() {
   return (
     <>
       <Image
-        src={"/Logo/CSLogoB.PNG"}
+        src={"/Logo/CSLogoB.png"}
         alt="Craig Sampson Logo"
         priority
         width={563}
@@ -12,7 +12,7 @@ export default function Logo() {
         className="size-20 dark:hidden"
       />
       <Image
-        src={"/Logo/CSLogo.PNG"} // Your white/light version
+        src={"/Logo/CSLogo.png"} 
         alt="Craig Sampson Logo"
         priority
         width={563}

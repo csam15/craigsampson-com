@@ -84,6 +84,15 @@ export default async function ProjectPage({
             />
           </div>
         )}
+
+        <div className="flex flex-col gap-1">
+          <h2 className="pb-4">Features</h2>
+          {project?.features?.map((feature, index) => (
+            <p key={index} className="whitespace-pre-line">
+              &bull; {feature}
+            </p>
+          ))}
+        </div>
       </div>
     </div>
   );

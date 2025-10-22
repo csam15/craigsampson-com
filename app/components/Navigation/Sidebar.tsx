@@ -34,7 +34,7 @@ export default function Sidebar({
     >
       <div className="flex flex-col items-center justify-center gap-8 w-full p-6">
         <div className="self-start space-y-1 xl:hidden">
-          <h2 className="">Craig Sampson</h2>
+          <h2 className="!font-fira">Craig Sampson</h2>
           <p>Full Stack Developer</p>
         </div>
         <div className="hidden xl:block">
