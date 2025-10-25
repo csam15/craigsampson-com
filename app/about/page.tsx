@@ -99,7 +99,7 @@ export default function About() {
           <p>
             I continued my wrestling career in college and after that began
             training other martial arts including Brazilian Jiu-Jitsu, Judo and
-            MMA. Besides training I am the assistant wrestlling coach at my
+            MMA. Besides training I am the assistant wrestling coach at my
             former high school as well as the head wrestling coach for my local
             <a
               href="https://pierromma.com"
