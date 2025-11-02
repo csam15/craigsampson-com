@@ -88,7 +88,7 @@ export default function About() {
           and personality to each project.
         </p>
       </div>
-      <div className="flex flex-col lg:flex-row items-start justify-center gap-5">
+      <div className="flex flex-col lg:flex-row items-start justify-between w-full gap-5 lg:gap-0">
         <div className="flex flex-col w-full lg:max-w-lg gap-3">
           <h2>Outside of Work</h2>
           <p>
@@ -112,19 +112,17 @@ export default function About() {
             </a>
           </p>
         </div>
-        <div className="self-center">
+        <div className="self-center lg:mr-15">
           <Image
             src={"/bjj.jpg"}
             alt="Craig Sampson BJJ"
             width={2071}
             height={4086}
-            className="h-165 w-auto rounded-2xl"
+            className="h-130 w-auto rounded-2xl"
           />
         </div>
       </div>
-      <div className="self-center">
-        <AboutContact />
-      </div>
+      <AboutContact />
     </div>
   );
 }

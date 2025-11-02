@@ -1,6 +1,6 @@
 "use client";
 
-import { PrimaryButton, SecondaryButton } from "./components/Buttons/Button";
+import { SecondaryButton } from "./components/Buttons/Button";
 
 export default function Error({
   error,

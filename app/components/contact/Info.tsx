@@ -1,4 +1,4 @@
-import {Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 export default function Info() {
   return (
@@ -8,31 +8,33 @@ export default function Info() {
           <div className="flex flex-col items-start">
             <div className="flex items-center gap-3">
               <Mail />
-              <h2>Email</h2>
+              <h3>Email</h3>
             </div>
             <div>
               <a href="mailto:craigsampson15@gmail.com">
-                <p className="font-semibold hover:text-secondary">craigsampson15@gmail.com</p>
+                <p className="font-light hover:text-secondary">
+                  craigsampson15@gmail.com
+                </p>
               </a>
             </div>
           </div>
           <div className="flex flex-col items-start">
             <div className="flex items-center gap-3">
               <Phone />
-              <h2>Phone</h2>
+              <h3>Phone</h3>
             </div>
             <div>
-              <p className="font-semibold">+1 (347) 609-5734</p>
+              <p className="font-light">+1 (347) 609-5734</p>
             </div>
           </div>
         </div>
         <div className="flex flex-col items-start">
           <div className="flex items-center gap-3">
             <MapPin />
-            <h2>Location</h2>
+            <h3>Location</h3>
           </div>
           <div>
-            <p className="font-semibold">New York, New York</p>
+            <p className="font-light">New York, New York</p>
           </div>
         </div>
       </div>

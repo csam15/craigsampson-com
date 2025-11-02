@@ -1,9 +1,9 @@
 import Image from "next/image";
-import Link from "next/link";
 import { PrimaryButton } from "../components/Buttons/Button";
 import { skills } from "../data/Skills";
 import { Minus } from "lucide-react";
 import type { Metadata } from "next";
+import { AboutContact } from "../components/ui/homepage/CallToAction";
 
 export const metadata: Metadata = {
   title: "Services - Web Development, Electronics Repair & Calligraphy | Craig Sampson",
@@ -146,6 +146,7 @@ export default function Projects() {
           />
         </div>
       </div>
+      <AboutContact />
     </div>
   );
 }
