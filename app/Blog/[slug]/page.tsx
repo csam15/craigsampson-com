@@ -1,16 +1,19 @@
 import { PortableText, type SanityDocument } from "next-sanity";
-import imageUrlBuilder from "@sanity/image-url";
-import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
 import { client } from "@/sanity/lib/client";
+import { urlFor } from "@/sanity/lib/image";
 import Link from "next/link";
 
-const POST_QUERY = `*[_type == "post" && slug.current == $slug][0]`;
-
-const { projectId, dataset } = client.config();
-const urlFor = (source: SanityImageSource) =>
-  projectId && dataset
-    ? imageUrlBuilder({ projectId, dataset }).image(source)
-    : null;
+const POST_QUERY = `*[_type == "post" && slug.current == $slug][0]{
+    title,
+    slug,
+    mainImage,
+    publishedAt,
+    body,
+    author->{
+      name,
+      bio
+    }
+  }`;
 
 const options = { next: { revalidate: 30 } };
 
@@ -24,9 +27,7 @@ export default async function PostPage({
     await params,
     options
   );
-  const postImageUrl = post.mainImage
-    ? urlFor(post.mainImage)?.url()
-    : null;
+  const postImageUrl = post.mainImage ? urlFor(post.mainImage).url() : null;
 
   return (
     <main className="container mx-auto min-h-screen max-w-3xl p-8 flex flex-col gap-4">
@@ -40,11 +41,16 @@ export default async function PostPage({
           className="w-360 h-auto rounded-xl"
         />
       ) : (
-        <div>
-            No image found
-        </div>
+        <div>No image found</div>
       )}
       <h1 className="text-4xl font-bold mb-8">{post.title}</h1>
+      <div>Author: {post.author.name}</div>
+      <div className="prose">
+        Bio:
+        {Array.isArray(post.author.bio) && (
+          <PortableText value={post.author.bio} />
+        )}
+      </div>
       <div className="prose">
         <p>Published: {new Date(post.publishedAt).toLocaleDateString()}</p>
         {Array.isArray(post.body) && <PortableText value={post.body} />}
