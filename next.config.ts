@@ -48,7 +48,7 @@ const nextConfig: NextConfig = {
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
               "font-src 'self' https://fonts.gstatic.com",
               "img-src 'self' data: https:",
-              "connect-src 'self'",
+              "connect-src 'self' https://*.sanity.io https://*.apicdn.sanity.io",
               "frame-ancestors 'none'",
               "base-uri 'self'",
               "form-action 'self'",
