@@ -1,5 +1,5 @@
 import { PortableText, type SanityDocument } from "next-sanity";
-import { client } from "@/sanity/lib/client";
+import { sanityFetch } from "@/sanity/lib/live";
 import { urlFor } from "@/sanity/lib/image";
 import Link from "next/link";
 
@@ -22,11 +22,11 @@ export default async function PostPage({
 }: {
   params: Promise<{ slug: string }>;
 }) {
-  const post = await client.fetch<SanityDocument>(
-    POST_QUERY,
-    await params,
-    options
-  );
+  const { data: post } = await sanityFetch({
+    // Change this
+    query: POST_QUERY,
+    params: await params,
+  });
   const postImageUrl = post.mainImage ? urlFor(post.mainImage).url() : null;
 
   return (
@@ -44,13 +44,17 @@ export default async function PostPage({
         <div>No image found</div>
       )}
       <h1 className="text-4xl font-bold mb-8">{post.title}</h1>
-      <div>Author: {post.author.name}</div>
-      <div className="prose">
-        Bio:
-        {Array.isArray(post.author.bio) && (
-          <PortableText value={post.author.bio} />
-        )}
-      </div>
+      {post.author && (
+        <>
+          <div>Author: {post.author.name}</div>
+          <div className="prose">
+            Bio:
+            {Array.isArray(post.author.bio) && (
+              <PortableText value={post.author.bio} />
+            )}
+          </div>
+        </>
+      )}
       <div className="prose">
         <p>Published: {new Date(post.publishedAt).toLocaleDateString()}</p>
         {Array.isArray(post.body) && <PortableText value={post.body} />}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Fira_Mono } from "next/font/google";
 import "./globals.css";
+import { SanityLive } from "@/sanity/lib/live";
 
 import Header from "./components/Navigation/Header";
 import Footer from "./components/Footer/Footer";
@@ -62,14 +63,17 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${bricolage.variable} ${fira_mono.variable} bg-background`}>
+      <body
+        className={`${bricolage.variable} ${fira_mono.variable} bg-background`}
+      >
         <ThemeProvider attribute="class" defaultTheme="light">
           <div className="xl:grid xl:grid-cols-[280px_1fr]">
             {" "}
@@ -82,6 +86,7 @@ export default function RootLayout({
                 <ThemeToggle />
               </div>
               {children}
+              <SanityLive />
             </main>
             <footer className="xl:col-start-2">
               <Footer />
