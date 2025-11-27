@@ -12,7 +12,7 @@
   --color-background-secondary: #111111;
   --color-border: light-dark(#d1d5db, #374151);
   --color-primary: #71648f;
-  --color-secondary: #b972f0;
+  --color-secondary: #963eda;
   --color-accent: #39a0ed;
   --color-error: #cf6679;
   --color-gray: #bbccc8;
@@ -102,4 +102,11 @@ p {
   .button-click {
     @apply transition-transform active:scale-95;
   }
+   .full-shadow {
+    @apply shadow-[0_0_6px_rgba(208,65,64,0.3)];
+  }
+  .hover-full-shadow {
+    @apply hover:shadow-[0_0_8px_rgba(208,65,64,0.3)];
+  }
+
 }

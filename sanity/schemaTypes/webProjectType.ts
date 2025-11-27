@@ -125,6 +125,16 @@ export const webProjectType = defineType({
       },
     }),
     defineField({
+      name: 'link',
+      type: 'string',
+      title: 'Link',
+    }),
+    defineField({
+      name: 'domain',
+      type: 'string',
+      title: 'Domain Name',
+    }),
+    defineField({
       name: 'features',
       type: 'array',
       title: 'Features',
