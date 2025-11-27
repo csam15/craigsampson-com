@@ -1,15 +1,32 @@
-import { wProjects } from "@/app/data/WebDevProjects";
-import { cProjects } from "../data/CalligraphyProjects";
-import Image from "next/image";
-import Link from "next/link";
 import type { Metadata } from "next";
+
+import Link from "next/link";
+import { type SanityDocument } from "next-sanity";
+import { urlFor } from "@/sanity/lib/image";
+import { sanityFetch } from "@/sanity/lib/live";
+
+const WEB_QUERY = `*[
+  _type == "webProject"
+  && defined(slug.current)
+]|order(title asc)[0...12]{_id, title, slug, previewImage, technologies, description, tagline}`;
+
+const CALLIGRAPHY_QUERY = `*[_type == "calligraphyProject"] | order(_createdAt desc){
+    _id,
+    title,
+    slug,
+    mainImage,
+    tagline,
+    tools
+  }`;
 
 export const metadata: Metadata = {
   title: "Projects - Craig Sampson Portfolio | Web Development & Calligraphy",
-  description: "Explore Craig Sampson's portfolio of web development projects and calligraphy work. Full stack applications built with React, Next.js, TypeScript, and more.",
+  description:
+    "Explore Craig Sampson's portfolio of web development projects and calligraphy work. Full stack applications built with React, Next.js, TypeScript, and more.",
   openGraph: {
     title: "Projects - Craig Sampson Portfolio",
-    description: "Explore Craig Sampson's portfolio of web development projects and calligraphy work. Full stack applications built with React, Next.js, TypeScript, and more.",
+    description:
+      "Explore Craig Sampson's portfolio of web development projects and calligraphy work. Full stack applications built with React, Next.js, TypeScript, and more.",
     url: "https://craigsampson.com/projects",
     siteName: "Craig Sampson",
     locale: "en_US",
@@ -18,110 +35,102 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Projects - Craig Sampson Portfolio",
-    description: "Explore Craig Sampson's portfolio of web development projects and calligraphy work.",
+    description:
+      "Explore Craig Sampson's portfolio of web development projects and calligraphy work.",
   },
   alternates: {
     canonical: "https://craigsampson.com/projects",
   },
 };
 
-export default function Projects() {
+export default async function Projects() {
+  const { data: posts } = await sanityFetch({
+    query: WEB_QUERY,
+  });
+
+  const { data: calligraphy } = await sanityFetch({
+    query: CALLIGRAPHY_QUERY,
+  });
+
   return (
     <div className="page-container">
       <div className="flex flex-col items-start gap-6">
         <h1 className="mb-8">Projects</h1>
         <div className="space-y-8 max-w-full w-full">
-          <h2 className="text-secondary">
-            Web Development & Software Projects
-          </h2>
-          {wProjects.map((project) => (
-            <Link
-              key={project.id}
-              href={`/projects/Web-development/${project.id}`}
-              className="flex flex-col md:flex-row gap-6 border border-border rounded-2xl p-6 hover:shadow-lg"
-            >
-              <div className="relative md:w-1/3 min-h-[200px] md:min-h-0 bg-secondary/10 dark:bg-primary/20 rounded-xl overflow-hidden">
-                <Image
-                  src={
-                    project.title === "Macstudio Nexus CRM"
-                      ? "/projects/crm.svg"
-                      : project.image[0]
-                  }
-                  priority
-                  alt={project.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover p-3 rounded-2xl"
+          <h2 className="text-secondary">Web Design & Development Projects</h2>
+          {posts.map((post: SanityDocument) => (
+            <div className="" key={post._id}>
+              <Link
+                href={`/projects/Web-development/${post.slug.current}`}
+                className="flex flex-col lg:flex-row gap-6 border border-border rounded-2xl p-6 hover-full-shadow"
+              >
+                <img
+                  src={urlFor(post.previewImage).width(500).url()}
+                  alt={post.title}
+                  className="bg-primary/70 dark:bg-primary/50 p-3"
                 />
-              </div>
+                <div className="flex-1 flex flex-col gap-3">
+                  <h2 className="text-xl font-semibold">{post.title}</h2>
+                  <p>{post.tagline}</p>
 
-              <div className="flex-1 flex flex-col gap-3">
-                <h2 className="!whitespace-normal">{project.title}</h2>
-                <p className="text-base">{project.tagline}</p>
-
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag, index) => (
-                    <span
-                      key={index}
-                      className="bg-primary/30 text-secondary px-3 py-1 rounded-xl text-sm font-semibold"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                <div className="flex flex-wrap gap-2 mt-2">
-                  {project.technologies.map((tech, index) => (
-                    <span
-                      key={index}
-                      className="text-sm text-gray-600 dark:text-gray-400"
-                    >
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    {post.technologies.map((tech: string, index: number) => (
                       <span
                         key={index}
-                        className="text-sm text-gray-600 dark:text-gray-400"
+                        className="text-base text-gray-600 dark:text-gray-400 font-bricolage"
                       >
-                        {index > 0 && " • "}
-                        {tech}
+                        <span
+                          key={index}
+                          className="text-base text-gray-600 dark:text-gray-400"
+                        >
+                          {index > 0 && " • "}
+                          {tech}
+                        </span>
                       </span>
-                    </span>
-                  ))}
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </div>
           ))}
-
+        </div>
+        <div className="space-y-8 max-w-full w-full">
           <h2 className="text-secondary">Calligraphy Projects</h2>
-          {cProjects.map((project) => (
-            <Link
-              key={project.id}
-              href={`/projects/calligraphy/${project.id}`}
-              className="flex flex-col md:flex-row gap-6 border border-border rounded-2xl p-6 hover:shadow-lg"
-            >
-              <div className="md:w-1/3 rounded-xl overflow-hidden">
-                <Image
-                  src={project.image[0]}
-                  alt={project.title}
-                  width={400}
-                  height={300}
-                  className=""
-                />
-              </div>
-              <div className="flex-1 flex flex-col gap-3">
-                <h2 className="!whitespace-normal">{project.title}</h2>
-                <p className="text-base">{project.tagline}</p>
+          {calligraphy.map((post: SanityDocument) => (
+            <div className="" key={post._id}>
+              <Link
+                href={`/projects/calligraphy/${post.slug.current}`}
+                className="flex flex-col lg:flex-row gap-6 border border-border rounded-2xl p-6 hover-full-shadow"
+              >
+                {post.mainImage && (
+                  <img
+                    src={urlFor(post.mainImage).width(500).url()}
+                    alt={post.title || "Calligraphy project"}
+                    className="bg-primary/70 dark:bg-primary/50 p-3"
+                  />
+                )}
+                <div className="flex-1 flex flex-col gap-3">
+                  {post.title && (
+                    <h2 className="text-xl font-semibold">{post.title}</h2>
+                  )}
+                  {post.tagline && <p>{post.tagline}</p>}
 
-                <div className="flex flex-wrap gap-2">
-                  {project.tools.map((tool, index) => (
-                    <span
-                      key={index}
-                      className="bg-primary/30 text-secondary px-3 py-1 rounded-xl text-sm font-semibold"
-                    >
-                      {tool}
-                    </span>
-                  ))}
+                  {post.tools && post.tools.length > 0 && (
+                    <div className="flex flex-wrap gap-2 mt-2">
+                      {post.tools.map((tool: string, index: number) => (
+                        <span
+                          key={index}
+                          className="text-base text-gray-600 dark:text-gray-400 font-bricolage"
+                        >
+                          {index > 0 && " • "}
+                          {tool}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </div>
           ))}
         </div>
       </div>

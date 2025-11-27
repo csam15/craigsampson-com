@@ -37,7 +37,7 @@ export default async function WebDevSlugPage({
   return (
     <div className="container mx-auto min-h-screen max-w-3xl p-4 flex flex-col gap-4">
       <div className="flex flex-col gap-4">
-        <Link href="/project-test" className="hover:underline">
+        <Link href="/projects" className="hover:underline">
           ← Back to posts
         </Link>
         <h1 className="text-4xl font-bold">{post.title}</h1>
