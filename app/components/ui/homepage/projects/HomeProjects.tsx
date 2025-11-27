@@ -1,11 +1,33 @@
 import { SecondaryButton } from "../../../Buttons/Button";
 import HomeProjectsCard from "./HomeProjectscard";
-import { wProjects } from "@/app/data/WebDevProjects";
+import { sanityFetch } from "@/sanity/lib/live";
+import { urlFor } from "@/sanity/lib/image";
 
-export default function HomeProjects() {
-  const crm = wProjects.find((project) => project.id === 1);
-  const google = wProjects.find((project) => project.id === 2);
-  const kalshi = wProjects.find((project) => project.id === 3);
+const WEB_PROJECTS_QUERY = `*[_type == "webProject"] | order(featured desc, title asc)[0...2]{
+  title,
+  slug,
+  previewImage,
+  technologies,
+}`;
+
+const CALLIGRAPHY_PROJECTS_QUERY = `*[_type == "calligraphyProject"] | order(featured desc, title asc)[0]{
+  title,
+  slug,
+  mainImage,
+  tools,
+}`;
+
+export default async function HomeProjects() {
+  const { data: webProjects } = await sanityFetch({
+    query: WEB_PROJECTS_QUERY,
+  });
+
+  const { data: calligraphyProject } = await sanityFetch({
+    query: CALLIGRAPHY_PROJECTS_QUERY,
+  });
+
+  const [webProject1, webProject2] = webProjects || [];
+  const calligraphyProject1 = calligraphyProject;
   return (
     <div className="space-y-4 w-full">
       <div className="flex flex-col md:flex-row items-start gap-4 justify-between w-full">
@@ -16,26 +38,35 @@ export default function HomeProjects() {
         <SecondaryButton label="See All" link="/projects" />
       </div>
       <div className="w-full grid grid-cols-1 gap-4 lg:grid-cols-2">
-        <div className="lg:col-span-2">
+        {webProject1 && (
+          <div className="lg:col-span-2">
+            <HomeProjectsCard
+              title={webProject1.title}
+              image={urlFor(webProject1.previewImage).url()}
+              types={webProject1.technologies || []}
+              slug={webProject1.slug.current}
+              projectType="web"
+            />
+          </div>
+        )}
+        {webProject2 && (
           <HomeProjectsCard
-            title={crm?.title ?? "Untitled Project"}
-            image={crm?.image[0] ?? "Image Not Found"}
-            types={[crm?.tags[0] ?? "", crm?.tags[1] ?? ""]}
-            id={crm?.id ?? 1}
+            title={webProject2.title}
+            image={urlFor(webProject2.previewImage).url()}
+            types={webProject2.technologies || []}
+            slug={webProject2.slug.current}
+            projectType="web"
           />
-        </div>
-        <HomeProjectsCard
-          title={google?.title ?? "Untitled Project"}
-          image={google?.image[0] ?? "Image not found"}
-          types={[google?.tags[0] ?? "", google?.tags[1] ?? ""]}
-          id={google?.id ?? 2}
-        />
-        <HomeProjectsCard
-          title={kalshi?.title ?? "Untitled Project"}
-          image={kalshi?.image[0] ?? "Image Not Found"}
-          types={[kalshi?.tags[0] ?? "", kalshi?.tags[1] ?? ""]}
-          id={kalshi?.id ?? 3}
-        />
+        )}
+        {calligraphyProject1 && (
+          <HomeProjectsCard
+            title={calligraphyProject1.title}
+            image={urlFor(calligraphyProject1.mainImage).url()}
+            types={calligraphyProject1.tools || []}
+            slug={calligraphyProject1.slug.current}
+            projectType="calligraphy"
+          />
+        )}
       </div>
     </div>
   );

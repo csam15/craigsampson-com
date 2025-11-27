@@ -79,6 +79,13 @@ export const calligraphyProjectType = defineType({
       description: 'A short, catchy tagline for the project',
     }),
     defineField({
+      name: 'featured',
+      type: 'boolean',
+      title: 'Featured',
+      description: 'Display this project on the homepage',
+      initialValue: false,
+    }),
+    defineField({
       name: 'description',
       type: 'text',
       title: 'Description',

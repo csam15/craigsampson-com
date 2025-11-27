@@ -5,25 +5,31 @@ export default function HomeProjectsCard({
   image,
   title,
   types,
-  id,
+  slug,
+  projectType,
 }: {
   image: string;
   title: string;
   types: Array<string>;
-  id: number;
+  slug: string;
+  projectType: "web" | "calligraphy";
 }) {
+  const href =
+    projectType === "web"
+      ? `/projects/Web-development/${slug}`
+      : `/projects/calligraphy/${slug}`;
+
   return (
     <Link
-      href={"/projects/Web-development/" + id}
+      href={href}
       className="bg-background border w-full h-full border-border gap-4 flex flex-col rounded-3xl px-2 pt-2 pb-6 button-click "
     >
-      {/* <div className="bg-secondary/10 dark:bg-primary/20 flex justify-center rounded-2xl px-8 pt-12 overflow-hidden w-full h-full"> */}
       <Image
         src={image}
         alt={title}
-        width={600}
+        width={1200}
         height={400}
-        className="rounded-2xl object-cover self-center w-full"
+        className="rounded-2xl h-auto self-center w-full"
       />
       {/* </div> */}
       <div>

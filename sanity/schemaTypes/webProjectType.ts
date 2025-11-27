@@ -35,6 +35,13 @@ export const webProjectType = defineType({
       title: 'Tagline',
     }),
     defineField({
+      name: 'featured',
+      type: 'boolean',
+      title: 'Featured',
+      description: 'Display this project on the homepage',
+      initialValue: false,
+    }),
+    defineField({
       name: 'previewImage',
       type: 'image',
       title: 'Preview Image',
