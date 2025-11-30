@@ -20,23 +20,27 @@ export default function HomeServices() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 ">
         <HomeServicesCard
           icon={<MonitorSmartphone className="size-10" />}
-          title="Web Development"
-          description="Building responsive and dynamic web apps using modern technologies like React, Next.js, and Node.js."
+          title="Complete Online Presence Solutions"
+          description="Your entire online ecosystem built for you — modern website design, SEO optimization, essential integrations, and continuous support to keep your business performing."
+          service="online-solutions"
         />
         <HomeServicesCard
           icon={<CodeXml className="size-10" />}
-          title="Custom Software Solutions"
-          description="Developing tailored software applications to meet specific business needs, enhancing efficiency and productivity."
+          title="Custom Automations & Integrations"
+          description="Connect your tools, automate your workflows, and eliminate repetitive tasks with custom-built solutions designed for your business."
+          service="custom-automations"
         />
         <HomeServicesCard
           icon={<TabletSmartphone className="size-10" />}
-          title="Electronics Repair"
-          description="Specializing in repairing smartphones, tablets, and laptops with a focus on quality and customer satisfaction."
+          title="Branding & Creative Design"
+          description="Build a cohesive brand with professional logo design, visual guidelines, and custom calligraphy elements that add a personal, handcrafted feel."
+          service="branding"
         />
         <HomeServicesCard
           icon={<PenTool className="size-10" />}
-          title="Calligraphy Art and Design"
-          description="Creating elegant and artistic calligraphy pieces for various occasions, including custom designs and commissions."
+          title="Electronics Repair"
+          description="From hardware diagnostics to custom PC builds, I repair and create with precision to bring devices back to life. Available for Staten Island customers only."
+          service="electronics-repair"
         />
       </div>
     </div>

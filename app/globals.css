@@ -71,7 +71,7 @@ h3 {
   @apply text-lg md:text-xl font-fira font-medium;
 }
 p {
-  @apply font-bricolage tracking-wide text-base md:text-lg text-gray-700 dark:text-gray-400;
+  @apply font-bricolage tracking-wide text-sm md:text-base text-gray-700 dark:text-gray-400;
 }
 
 @layer components {

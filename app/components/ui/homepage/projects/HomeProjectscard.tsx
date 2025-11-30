@@ -22,7 +22,7 @@ export default function HomeProjectsCard({
   return (
     <Link
       href={href}
-      className="bg-background border w-full h-full border-border gap-4 flex flex-col rounded-3xl px-2 pt-2 pb-6 button-click "
+      className="bg-background border w-full h-full border-border gap-4 flex flex-col rounded-3xl px-2 pt-2 pb-6 button-click"
     >
       <Image
         src={image}
@@ -35,7 +35,7 @@ export default function HomeProjectsCard({
       <div>
         <h2 className="!text-xl font-semibold">{title}</h2>
       </div>
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 flex-wrap">
         {types.map((type, index) => (
           <div key={index} className="rounded-xl bg-primary/30 w-fit">
             <span className="whitespace-nowrap text-sm font-semibold text-secondary px-3 py-1">
