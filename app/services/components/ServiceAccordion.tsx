@@ -24,16 +24,14 @@ export default function ServiceAccordion() {
         "Mobile-first, responsive layouts",
         "Clean UI/UX for easy navigation",
         "On-brand color, typography, and visual styling",
-        "Focused on clarity, professionalism, and conversion",
       ],
     },
     {
       icon: <Database className="text-black dark:text-white" />, // Add your icon here
       title: "Web Development",
       points: [
-        "Hosting & Deployment",
-        "Scalable and secure code structure",
-        "CMS integration for easy content updates",
+        "Hosting + Deployment",
+        "CMS integration for easy blog and portfolio updates",
         "Performance, accessibility, and security best practices",
       ],
     },
@@ -51,25 +49,29 @@ export default function ServiceAccordion() {
       icon: <Blocks className="text-black dark:text-white" />, // Add your icon here
       title: "Integrations & Tool Setup",
       points: [
-        "Website updates, fixes, and improvements",
-        "Content and design updates on request",
-        "Performance + SEO checkups",
-      ],
-    },
-    {
-      icon: <Wrench className="text-black dark:text-white" />, // Add your icon here
-      title: "Ongoing Support & Maintenance",
-      points: [
         "Setup of essential business tools (email, CRM, scheduling)",
         "Payment, booking, and form integrations",
         "Third-party service connections (Stripe, Google, HubSpot, etc.)",
       ],
     },
     {
+      icon: <Wrench className="text-black dark:text-white" />, // Add your icon here
+      title: "Ongoing Support & Maintenance",
+      points: [
+        "Website updates, fixes, and improvements",
+        "Content and design updates on request",
+        "Performance + SEO checkups",
+      ],
+    },
+    {
       icon: <Palette className="text-black dark:text-white" />, // Add your icon here
       title: "Branding & Creative Design",
       points: [
-        <Link key="branding-link" className="hover:text-secondary" href="branding">
+        <Link
+          key="branding-link"
+          className="hover:text-secondary"
+          href="branding"
+        >
           Check out our branding services here!
         </Link>,
       ],

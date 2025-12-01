@@ -1,7 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import { Plus, Zap, Workflow, Bot, Database, Cloud, Link as LinkIcon } from "lucide-react";
+import {
+  Plus,
+  Zap,
+  Workflow,
+  Bot,
+  Database,
+  Cloud,
+  Link as LinkIcon,
+} from "lucide-react";
 
 export default function AutomationsAccordion() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -11,54 +19,36 @@ export default function AutomationsAccordion() {
       icon: <Workflow className="text-black dark:text-white" />,
       title: "Workflow Automation",
       points: [
-        "Bullet point one",
-        "Bullet point two",
-        "Bullet point three",
+        "Automate repetitive tasks to save time and reduce manual errors",
+        "Build custom workflows for emails, reminders, approvals, and notifications",
+        "Improve efficiency with ongoing monitoring and refinement",
       ],
     },
     {
       icon: <Bot className="text-black dark:text-white" />,
-      title: "Business Process Automation",
+      title: "API Integrations",
       points: [
-        "Bullet point one",
-        "Bullet point two",
-        "Bullet point three",
+        "Connect your website or app to third-party platforms (Google, HubSpot, Stripe, etc.)",
+        "Set up custom API calls to sync data in real time",
+        "Create backend logic to automate complex business processes",
       ],
     },
     {
       icon: <LinkIcon className="text-black dark:text-white" />,
-      title: "Third-Party Integrations",
+      title: "CRM & Business Tool Setup",
       points: [
-        "Bullet point one",
-        "Bullet point two",
-        "Bullet point three",
-      ],
-    },
-    {
-      icon: <Database className="text-black dark:text-white" />,
-      title: "Data Sync & Migration",
-      points: [
-        "Bullet point one",
-        "Bullet point two",
-        "Bullet point three",
-      ],
-    },
-    {
-      icon: <Cloud className="text-black dark:text-white" />,
-      title: "Cloud Integrations",
-      points: [
-        "Bullet point one",
-        "Bullet point two",
-        "Bullet point three",
+        "Integrate CRMs like HubSpot for contact, deal, and communication tracking",
+        "Set up automated pipelines, tasks, and email sequences",
+        "Train your team on how to use and manage the system",
       ],
     },
     {
       icon: <Zap className="text-black dark:text-white" />,
-      title: "Custom API Development",
+      title: "Custom Integration Solutions",
       points: [
-        "Bullet point one",
-        "Bullet point two",
-        "Bullet point three",
+        "Tailored automations based on your specific workflow",
+        "Data syncing between internal and external systems",
+        "Custom scripts to handle tasks no prebuilt tool can",
       ],
     },
   ];

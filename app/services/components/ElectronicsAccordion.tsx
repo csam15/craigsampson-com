@@ -1,7 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import { Plus, Smartphone, Laptop, Tablet, Battery, Cpu, Shield } from "lucide-react";
+import {
+  Plus,
+  Smartphone,
+  Laptop,
+  Tablet,
+  Battery,
+  Cpu,
+  Shield,
+} from "lucide-react";
 
 export default function ElectronicsAccordion() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -11,55 +19,45 @@ export default function ElectronicsAccordion() {
       icon: <Smartphone className="text-black dark:text-white" />,
       title: "Smartphone Repair",
       points: [
-        "Bullet point one",
-        "Bullet point two",
-        "Bullet point three",
+        "iPhone + android repairs",
+        "Displays, cameras, speakers, and more",
       ],
     },
     {
       icon: <Tablet className="text-black dark:text-white" />,
       title: "Tablet Repair",
       points: [
-        "Bullet point one",
-        "Bullet point two",
-        "Bullet point three",
+        "iPad + other tablet repairs",
+        "Displays, cameras, speakers, and more",
       ],
     },
     {
       icon: <Laptop className="text-black dark:text-white" />,
-      title: "Laptop Repair",
+      title: "Laptop Repair + Upgrades",
       points: [
-        "Bullet point one",
-        "Bullet point two",
-        "Bullet point three",
+        "Windows + mac device repairs and upgrades",
+        "Displays, batteries, keyboards and more",
+        "Storage, RAM, + more hardware upgrades",
       ],
     },
     {
       icon: <Battery className="text-black dark:text-white" />,
       title: "Battery Replacement",
       points: [
-        "Bullet point one",
-        "Bullet point two",
-        "Bullet point three",
+        "Smartphone battery replacement",
+        "Tablet battery replacement",
+        "Laptop battery replacement",
       ],
     },
     {
       icon: <Shield className="text-black dark:text-white" />,
       title: "Screen Protection",
-      points: [
-        "Bullet point one",
-        "Bullet point two",
-        "Bullet point three",
-      ],
+      points: ["Smartphone screen protectors available"],
     },
     {
       icon: <Cpu className="text-black dark:text-white" />,
-      title: "Hardware Upgrades",
-      points: [
-        "Bullet point one",
-        "Bullet point two",
-        "Bullet point three",
-      ],
+      title: "Custom PC Builds",
+      points: ["Fully custom PC builds based on your budget range"],
     },
   ];
 
