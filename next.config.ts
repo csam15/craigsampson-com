@@ -50,11 +50,11 @@ const nextConfig: NextConfig = {
             key: "Content-Security-Policy",
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.hs-scripts.com https://js.hsforms.net https://js.hscollectedforms.net",
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
               "font-src 'self' https://fonts.gstatic.com",
               "img-src 'self' data: https:",
-              "connect-src 'self' https://*.sanity.io https://*.apicdn.sanity.io",
+              "connect-src 'self' https://*.sanity.io https://*.apicdn.sanity.io https://*.hubspot.com https://*.hsforms.com https://*.hs-scripts.com https://*.hs-analytics.net",
               "frame-ancestors 'none'",
               "base-uri 'self'",
               "form-action 'self'",
