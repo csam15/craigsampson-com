@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Bricolage_Grotesque, Fira_Mono } from "next/font/google";
 import "./globals.css";
 import { SanityLive } from "@/sanity/lib/live";
+import Script from "next/script";
 
 import Header from "./components/Navigation/Header";
 import Footer from "./components/Footer/Footer";
@@ -92,13 +93,13 @@ export default async function RootLayout({
             </footer>
           </div>
         </ThemeProvider>
-        <script
+        <Script
           type="text/javascript"
           id="hs-script-loader"
           async
           defer
           src="//js.hs-scripts.com/49125295.js"
-        ></script>
+        />
       </body>
     </html>
   );
