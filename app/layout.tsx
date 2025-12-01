@@ -68,7 +68,6 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -93,6 +92,13 @@ export default async function RootLayout({
             </footer>
           </div>
         </ThemeProvider>
+        <script
+          type="text/javascript"
+          id="hs-script-loader"
+          async
+          defer
+          src="//js.hs-scripts.com/49125295.js"
+        ></script>
       </body>
     </html>
   );
