@@ -82,7 +82,7 @@ p {
     @apply font-bricolage cursor-pointer  border border-border rounded-3xl px-7 py-2 text-xl transition-transform active:scale-95;
   }
   .page-container {
-    @apply flex flex-col items-start gap-12 justify-start mb-20 lg:mb-40 2xl:max-w-[60rem] min-h-screen;
+    @apply flex flex-col items-start gap-18 justify-start mb-20 lg:mb-40 2xl:max-w-[60rem] min-h-screen;
   }
   .quote-header {
     @apply bg-black text-white border-1 border-black w-full;
