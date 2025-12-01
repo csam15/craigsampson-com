@@ -98,7 +98,7 @@ export default async function RootLayout({
           id="hs-script-loader"
           async
           defer
-          src="//js.hs-scripts.com/49125295.js"
+          src="https://js.hs-scripts.com/49125295.js"
         />
       </body>
     </html>
