@@ -29,13 +29,13 @@ export const metadata: Metadata = {
   description:
     "Craig Sampson is a full stack developer specializing in React, Next.js, and TypeScript. Also offering electronics repair and custom calligraphy services.",
   keywords: [
-    "full stack developer",
-    "web developer",
+    "website design services staten island ",
+    "website development services staten island",
     "React",
     "Next.js",
     "TypeScript",
-    "electronics repair",
-    "calligraphy",
+    "electronics repair services in staten island",
+    "calligraphy services in staten island",
     "Craig Sampson",
   ],
   authors: [{ name: "Craig Sampson" }],
@@ -68,7 +68,6 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
     <html lang="en" suppressHydrationWarning>
       <body
