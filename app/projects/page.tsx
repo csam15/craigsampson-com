@@ -8,7 +8,7 @@ import { sanityFetch } from "@/sanity/lib/live";
 const WEB_QUERY = `*[
   _type == "webProject"
   && defined(slug.current)
-]|order(title asc)[0...12]{_id, title, slug, previewImage, technologies, description, tagline}`;
+]|order(_createdAt desc)[0...12]{_id, title, slug, previewImage, technologies, description, tagline}`;
 
 const CALLIGRAPHY_QUERY = `*[_type == "calligraphyProject"] | order(_createdAt desc){
     _id,
@@ -67,7 +67,7 @@ export default async function Projects() {
                 <img
                   src={urlFor(post.previewImage).width(500).url()}
                   alt={post.title}
-                  className="bg-primary/70 dark:bg-primary/50 p-3"
+                  className="bg-black/50 dark:bg-primary/50 p-3"
                 />
                 <div className="flex-1 flex flex-col gap-3">
                   <h2 className="text-xl font-semibold">{post.title}</h2>
@@ -95,7 +95,9 @@ export default async function Projects() {
           ))}
         </div>
         <div className="space-y-8 max-w-full w-full">
-          <h2 className="text-secondary">Calligraphy Projects</h2>
+          <h2 className="text-secondary">
+            Branding & Creative Design Projects
+          </h2>
           {calligraphy.map((post: SanityDocument) => (
             <div className="" key={post._id}>
               <Link
@@ -106,7 +108,7 @@ export default async function Projects() {
                   <img
                     src={urlFor(post.mainImage).width(500).url()}
                     alt={post.title || "Calligraphy project"}
-                    className="bg-primary/70 dark:bg-primary/50 p-3"
+                    className="bg-black/50 dark:bg-primary/50 p-3"
                   />
                 )}
                 <div className="flex-1 flex flex-col gap-3">

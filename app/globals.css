@@ -102,11 +102,10 @@ p {
   .button-click {
     @apply transition-transform active:scale-95;
   }
-   .full-shadow {
+  .full-shadow {
     @apply shadow-[0_0_6px_rgba(208,65,64,0.3)];
   }
   .hover-full-shadow {
-    @apply hover:shadow-[0_0_8px_rgba(208,65,64,0.3)];
+    @apply hover:shadow-[0_0_8px_rgba(0,0,0,0.3)] dark:hover:shadow-[0_0_8px_rgba(255,255,255,0.3)];
   }
-
 }

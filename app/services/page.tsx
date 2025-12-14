@@ -67,7 +67,7 @@ export default function Projects() {
         <HomeServicesCard
           icon={<TabletSmartphone className="size-10" />}
           title="Electronics Repair"
-          description="From hardware diagnostics to custom PC builds, I repair and create with precision to bring devices back to life. Available for local Staten Island customers only."
+          description="From hardware diagnostics to custom PC builds, I repair and create with precision to bring devices back to life. Available for local customers only."
           service="electronics_repair"
         />
       </div>
