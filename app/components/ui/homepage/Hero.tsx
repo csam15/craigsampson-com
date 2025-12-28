@@ -1,5 +1,4 @@
 import { PrimaryButton, SecondaryButton } from "../../Buttons/Button";
-import OpenToWork from "./OpenToWork";
 import Socials from "./Socials";
 
 export default function Hero() {
@@ -15,8 +14,8 @@ export default function Hero() {
         <h2 className="">Full Stack Developer & more...</h2>
       </div>
       <div className="flex flex-col lg:flex-row items-start lg:items-end gap-4 w-full">
-        <PrimaryButton label="About Me" link="/about" />
-        <SecondaryButton label="See My Work" link="/projects" />
+        <PrimaryButton label="See My Work" link="/projects" />
+        <SecondaryButton label="About me" link="/about" />
         <span className="lg:hidden">
           <Socials />
         </span>

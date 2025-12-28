@@ -22,7 +22,7 @@ export default function HomeProjectsCard({
   return (
     <Link
       href={href}
-      className="bg-background border w-full h-full border-border gap-4 flex flex-col rounded-3xl px-2 pt-2 pb-6 button-click"
+      className="bg-background border w-full h-full border-border gap-4 flex flex-col rounded-3xl px-2 pt-2 pb-6 button-click full-shadow shadow-black/30 dark:shadow-white/20"
     >
       <Image
         src={image}

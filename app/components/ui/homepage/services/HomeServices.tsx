@@ -31,13 +31,13 @@ export default function HomeServices() {
           service="custom-automations"
         />
         <HomeServicesCard
-          icon={<TabletSmartphone className="size-10" />}
+          icon={<PenTool className="size-10" />}
           title="Branding & Creative Design"
           description="Build a cohesive brand with professional logo design, visual guidelines, and custom calligraphy elements that add a personal, handcrafted feel."
           service="branding"
-        />
+          />
         <HomeServicesCard
-          icon={<PenTool className="size-10" />}
+          icon={<TabletSmartphone className="size-10" />}
           title="Electronics Repair"
           description="From hardware diagnostics to custom PC builds, I repair and create with precision to bring devices back to life. Available for Staten Island customers only."
           service="electronics-repair"

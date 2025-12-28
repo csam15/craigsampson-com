@@ -17,7 +17,6 @@ export default function HomeServicesCard({
       <div className="text-secondary dark:text-white xl:pb-10">{icon}</div>
       <h3 className="">{title}</h3>
       <p className="font-light">{description}</p>
-      <Link href={`/services/${service}`} className="flex-1 group hover:text-secondary/80 text-xl font-semibold font-bricolage flex items-center text-secondary">Learn More <ArrowUpRight className="arrow-up-right" /></Link>
     </div>
   );
 }

@@ -12,16 +12,6 @@ export default function Socials() {
       href: "https://www.linkedin.com/in/craig-sampson15/",
       image: "/socials/linkedin.png",
     },
-    {
-      name: "Twitter",
-      href: "https://twitter.com/csam015",
-      image: "/socials/x.png",
-    },
-    {
-      name: "Instagram",
-      href: "https://www.instagram.com/csampson15/",
-      image: "/socials/insta.png",
-    },
   ];
 
   return (

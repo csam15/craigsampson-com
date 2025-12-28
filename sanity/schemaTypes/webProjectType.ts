@@ -59,77 +59,10 @@ export const webProjectType = defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'mainImage',
-      type: 'image',
-      title: 'Main Image',
-      options: {
-        hotspot: true,
-      },
-      fields: [
-        defineField({
-          name: 'alt',
-          type: 'string',
-          title: 'Alternative text',
-          validation: (Rule) => Rule.required(),
-        }),
-      ],
-      validation: (Rule) => Rule.required(),
-    }),
-    defineField({
-      name: 'imageGallery',
-      type: 'array',
-      title: 'Image Gallery',
-      description: 'Additional project images',
-      of: [
-        defineArrayMember({
-          type: 'image',
-          options: {
-            hotspot: true,
-          },
-          fields: [
-            {
-              name: 'alt',
-              type: 'string',
-              title: 'Alternative text',
-            },
-            {
-              name: 'caption',
-              type: 'string',
-              title: 'Caption',
-            },
-          ],
-        }),
-      ],
-    }),
-    defineField({
       name: 'categories',
       type: 'array',
       title: 'Categories',
       of: [defineArrayMember({ type: 'reference', to: { type: 'category' } })],
-    }),
-    defineField({
-      name: 'description',
-      type: 'text',
-      title: 'Description',
-      rows: 4,
-      validation: (Rule) => Rule.required(),
-    }),
-    defineField({
-      name: 'goals',
-      type: 'array',
-      title: 'Project Goals',
-      description: 'Add up to 3 key project goals',
-      of: [{ type: 'string' }],
-      validation: (Rule) => Rule.max(3).required(),
-    }),
-    defineField({
-      name: 'technologies',
-      type: 'array',
-      title: 'Technologies',
-      of: [{ type: 'string' }],
-      options: {
-        layout: 'tags',
-      },
     }),
     defineField({
       name: 'link',
