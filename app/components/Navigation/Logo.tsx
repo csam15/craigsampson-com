@@ -4,20 +4,20 @@ export default function Logo() {
   return (
     <>
       <Image
-        src={"/Logo/CSLogoB.png"}
+        src={"/Logo/Logo-black.svg"}
         alt="Craig Sampson Logo"
         priority
-        width={563}
-        height={563}
-        className="size-20 dark:hidden"
+        width={0}
+        height={0}
+        className="size-18 dark:hidden"
       />
       <Image
-        src={"/Logo/CSLogo.png"} 
+        src={"/Logo/Logo-white.svg"} 
         alt="Craig Sampson Logo"
         priority
-        width={563}
-        height={563}
-        className="size-20 hidden dark:block"
+        width={0}
+        height={0}
+        className="size-18 hidden dark:block"
       />
     </>
   );

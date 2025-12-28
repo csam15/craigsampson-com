@@ -1,8 +1,7 @@
 import { MetadataRoute } from "next";
-import { wProjects } from "./data/WebDevProjects";
-import { cProjects } from "./data/CalligraphyProjects";
+import { client } from "@/sanity/lib/client";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://craigsampson.com";
 
   // Static routes
@@ -26,6 +25,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/services/online_solutions`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/services/automations_and_integrations`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/services/branding`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/services/electronics_repair`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/contact`,
       lastModified: new Date(),
       changeFrequency: "monthly",
@@ -39,17 +62,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // Dynamic web development project routes
-  const webDevRoutes: MetadataRoute.Sitemap = wProjects.map((project) => ({
-    url: `${baseUrl}/projects/Web-development/${project.id}`,
+  // Fetch web development projects from Sanity
+  const webProjects = await client.fetch<{ slug: { current: string } }[]>(
+    `*[_type == "webProject"]{ slug }`
+  );
+
+  const webDevRoutes: MetadataRoute.Sitemap = webProjects.map((project) => ({
+    url: `${baseUrl}/projects/Web-development/${project.slug.current}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.8,
   }));
 
-  // Dynamic calligraphy project routes
-  const calligraphyRoutes: MetadataRoute.Sitemap = cProjects.map((project) => ({
-    url: `${baseUrl}/projects/calligraphy/${project.id}`,
+  // Fetch calligraphy projects from Sanity
+  const calligraphyProjects = await client.fetch<{ slug: { current: string } }[]>(
+    `*[_type == "calligraphyProject"]{ slug }`
+  );
+
+  const calligraphyRoutes: MetadataRoute.Sitemap = calligraphyProjects.map((project) => ({
+    url: `${baseUrl}/projects/calligraphy/${project.slug.current}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.8,

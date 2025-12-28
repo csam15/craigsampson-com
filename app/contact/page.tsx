@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 export default function Contact() {
   return (
     <div className="page-container">
-      <div className="">
+      <div className="flex flex-col items-start gap-6">
         <h1>Let&apos;s Work Together!</h1>
         <p>Send me a quick message with your inquiry</p>
       </div>

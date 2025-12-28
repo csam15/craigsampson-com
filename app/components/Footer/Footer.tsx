@@ -13,8 +13,6 @@ export default function Footer() {
   const Sociallinks = [
     { name: "GitHub", href: "https://www.github.com/csam15" },
     { name: "LinkedIn", href: "https://www.linkedin.com/in/craig-sampson15/" },
-    { name: "Twitter", href: "https://twitter.com/csam015" },
-    { name: "Instagram", href: "https://www.instagram.com/csampson15/" },
   ];
 
   return (

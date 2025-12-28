@@ -2,7 +2,7 @@ import Logo from "../Logo";
 
 export default function MyInfo() {
   return (
-    <div className="flex items-center justify-center gap-2">
+    <div className="flex items-center justify-center gap-4">
       {/* <Headshot /> */}
       <Logo />
       <div className="">
