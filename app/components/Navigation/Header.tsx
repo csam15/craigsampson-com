@@ -28,7 +28,11 @@ export default function Header() {
           <MyInfo />
         </div>
         <div className="xl:hidden">
-          <button className="cursor-pointer relative" onClick={toggleMenu}>
+          <button
+            className="cursor-pointer relative"
+            onClick={toggleMenu}
+            aria-label="Open Menu"
+          >
             <Menu
               className={`size-10 text-purple-400 transition-all duration-300 ${
                 isMenuOpen
@@ -37,6 +41,7 @@ export default function Header() {
               }`}
             />
             <X
+              aria-label="Close Menu"
               className={`size-10 text-purple-400 absolute inset-0 transition-all duration-300 ${
                 isMenuOpen
                   ? "opacity-100 rotate-0 scale-100"

@@ -1,4 +1,3 @@
-import { PortableText, type SanityDocument } from "next-sanity";
 import { sanityFetch } from "@/sanity/lib/live";
 import { urlFor } from "@/sanity/lib/image";
 import Link from "next/link";

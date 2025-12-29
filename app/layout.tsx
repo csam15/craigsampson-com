@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Fira_Mono } from "next/font/google";
 import "./globals.css";
-import { SanityLive } from "@/sanity/lib/live";
-import Script from "next/script";
 
 import Header from "./components/Navigation/Header";
 import Footer from "./components/Footer/Footer";
@@ -86,20 +84,12 @@ export default async function RootLayout({
                 <ThemeToggle />
               </div>
               {children}
-              <SanityLive />
             </main>
             <footer className="xl:col-start-2">
               <Footer />
             </footer>
           </div>
         </ThemeProvider>
-        <Script
-          type="text/javascript"
-          id="hs-script-loader"
-          async
-          defer
-          src="https://js.hs-scripts.com/49125295.js"
-        />
       </body>
     </html>
   );

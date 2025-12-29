@@ -7,16 +7,16 @@ export default function Logo() {
         src={"/Logo/Logo-black.svg"}
         alt="Craig Sampson Logo"
         priority
-        width={0}
-        height={0}
+        width={270}
+        height={443}
         className="size-18 dark:hidden"
       />
       <Image
         src={"/Logo/Logo-white.svg"} 
         alt="Craig Sampson Logo"
         priority
-        width={0}
-        height={0}
+        width={270}
+        height={443}
         className="size-18 hidden dark:block"
       />
     </>

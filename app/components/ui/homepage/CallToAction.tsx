@@ -17,8 +17,8 @@ export function HomeContact() {
         <Image
           src={"/question.svg"}
           alt="question mark"
-          width={100}
-          height={100}
+          width={277}
+          height={429}
           className="size-90 md:self-end"
         />
       </div>
