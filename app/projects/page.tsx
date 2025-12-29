@@ -8,7 +8,7 @@ import { sanityFetch } from "@/sanity/lib/live";
 const WEB_QUERY = `*[
   _type == "webProject"
   && defined(slug.current)
-]|order(_createdAt desc)[0...12]{_id, title, slug, previewImage, technologies, description, tagline}`;
+]|order(_createdAt asc)[0...12]{_id, title, slug, previewImage, link, tagline}`;
 
 const CALLIGRAPHY_QUERY = `*[_type == "calligraphyProject"] | order(_createdAt desc){
     _id,
@@ -60,37 +60,21 @@ export default async function Projects() {
           <h2 className="text-secondary">Web Design & Development Projects</h2>
           {posts.map((post: SanityDocument) => (
             <div className="" key={post._id}>
-              <Link
-                href={`/projects/Web-development/${post.slug.current}`}
+              <a
+                href={post.link}
+                target="_blank"
                 className="flex flex-col lg:flex-row gap-6 border border-border rounded-2xl p-6 hover-full-shadow"
               >
                 <img
                   src={urlFor(post.previewImage).width(500).url()}
                   alt={post.title}
-                  className="bg-black/50 dark:bg-primary/50 p-3"
+                  className="bg-border p-3"
                 />
                 <div className="flex-1 flex flex-col gap-3">
                   <h2 className="text-xl font-semibold">{post.title}</h2>
                   <p>{post.tagline}</p>
-
-                  <div className="flex flex-wrap gap-2 mt-2">
-                    {post.technologies.map((tech: string, index: number) => (
-                      <span
-                        key={index}
-                        className="text-base text-gray-600 dark:text-gray-400 font-bricolage"
-                      >
-                        <span
-                          key={index}
-                          className="text-base text-gray-600 dark:text-gray-400"
-                        >
-                          {index > 0 && " • "}
-                          {tech}
-                        </span>
-                      </span>
-                    ))}
-                  </div>
                 </div>
-              </Link>
+              </a>
             </div>
           ))}
         </div>
@@ -108,7 +92,7 @@ export default async function Projects() {
                   <img
                     src={urlFor(post.mainImage).width(500).url()}
                     alt={post.title || "Calligraphy project"}
-                    className="bg-black/50 dark:bg-primary/50 p-3"
+                    className="bg-border p-3"
                   />
                 )}
                 <div className="flex-1 flex flex-col gap-3">

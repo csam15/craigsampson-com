@@ -14,7 +14,7 @@ export default function Hero() {
         <h2 className="">Full Stack Developer & more...</h2>
       </div>
       <div className="flex flex-col lg:flex-row items-start lg:items-end gap-4 w-full">
-        <PrimaryButton label="See My Work" link="/projects" />
+        <PrimaryButton label="Let's Talk" link="/contact" />
         <SecondaryButton label="About me" link="/about" />
         <span className="lg:hidden">
           <Socials />

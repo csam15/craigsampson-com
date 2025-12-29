@@ -5,16 +5,16 @@ import { urlFor } from "@/sanity/lib/image";
 
 const WEB_PROJECTS_QUERY = `*[_type == "webProject"] | order(featured desc, title asc)[0...2]{
   title,
-  slug,
+  link,
   previewImage,
-  technologies,
+  tagline
 }`;
 
 const CALLIGRAPHY_PROJECTS_QUERY = `*[_type == "calligraphyProject"] | order(featured desc, title asc)[0]{
   title,
   slug,
   mainImage,
-  tools,
+  tagline
 }`;
 
 export default async function HomeProjects() {
@@ -42,9 +42,10 @@ export default async function HomeProjects() {
           <div className="lg:col-span-2">
             <HomeProjectsCard
               title={webProject1.title}
+              tagline={webProject1.tagline}
               image={urlFor(webProject1.previewImage).url()}
               types={webProject1.technologies || []}
-              slug={webProject1.slug.current}
+              link={webProject1.link}
               projectType="web"
             />
           </div>
@@ -52,15 +53,17 @@ export default async function HomeProjects() {
         {webProject2 && (
           <HomeProjectsCard
             title={webProject2.title}
+            tagline={webProject2.tagline}
             image={urlFor(webProject2.previewImage).url()}
             types={webProject2.technologies || []}
-            slug={webProject2.slug.current}
+            link={webProject2.link}
             projectType="web"
           />
         )}
         {calligraphyProject1 && (
           <HomeProjectsCard
             title={calligraphyProject1.title}
+            tagline={calligraphyProject1.tagline}
             image={urlFor(calligraphyProject1.mainImage).url()}
             types={calligraphyProject1.tools || []}
             slug={calligraphyProject1.slug.current}

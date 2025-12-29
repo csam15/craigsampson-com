@@ -19,7 +19,6 @@ export default function Sidebar({
   const menuItems = [
     { name: "Home", href: "/", icon: House },
     { name: "Projects", href: "/projects", icon: FolderOpen },
-    { name: "Services", href: "/services", icon: Wrench },
     { name: "About Me", href: "/about", icon: UserRound },
     { name: "Contact", href: "/contact", icon: Mail },
   ];

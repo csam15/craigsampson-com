@@ -15,7 +15,6 @@ export default function HomeServices() {
           <h1 className="font-semibold">How I can help</h1>
           <p>Turning problems into practical solutions.</p>
         </div>
-        <SecondaryButton label="See All" link="/services" />
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 ">
         <HomeServicesCard
@@ -35,7 +34,7 @@ export default function HomeServices() {
           title="Branding & Creative Design"
           description="Build a cohesive brand with professional logo design, visual guidelines, and custom calligraphy elements that add a personal, handcrafted feel."
           service="branding"
-          />
+        />
         <HomeServicesCard
           icon={<TabletSmartphone className="size-10" />}
           title="Electronics Repair"

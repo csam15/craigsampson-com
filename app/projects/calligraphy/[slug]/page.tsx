@@ -34,20 +34,22 @@ export default async function CalligraphySlugPage({
   return (
     <div className="container mx-auto min-h-screen max-w-3xl p-4 flex flex-col gap-4">
       <div className="flex flex-col gap-4">
-        <Link href="/projects" className="hover:underline">
+        <Link
+          href="/projects"
+          className="text-sm xl:text-base hover:underline font-fira"
+        >
           ← Back to posts
         </Link>
         <h1 className="text-4xl font-bold">{post.title}</h1>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 -mt-2">
           <h2 className="text-primary">Project Overview</h2>
           <p>{post.description}</p>
         </div>
-        <p className="">{post.tagline}</p>
         {postImageUrl ? (
           <img
             src={postImageUrl}
             alt={post.title}
-            className="w-360 h-auto rounded-xl"
+            className="w-300 h-auto rounded-xl"
           />
         ) : (
           <div>No image found</div>
@@ -74,19 +76,22 @@ export default async function CalligraphySlugPage({
         </div>
       )}
       {post.imageGallery && post.imageGallery.length > 0 && (
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {post.imageGallery.map((image: string, index: number) => {
-            const imageUrl = urlFor(image).url();
-            return (
-              <img
-                key={index}
-                src={imageUrl}
-                alt={`Gallery image ${index + 1}`}
-                className="w-full h-auto rounded-lg"
-              />
-            );
-          })}
-        </div>
+        <>
+          <h2>Image Gallery</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 place-items-center">
+            {post.imageGallery.map((image: string, index: number) => {
+              const imageUrl = urlFor(image).url();
+              return (
+                <img
+                  key={index}
+                  src={imageUrl}
+                  alt={`Gallery image ${index + 1}`}
+                  className="w-full h-auto rounded-lg"
+                />
+              );
+            })}
+          </div>
+        </>
       )}
     </div>
   );

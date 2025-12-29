@@ -28,8 +28,8 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <div className="page-container">
-      <div className="space-y-6 lg:space-y-8">
+    <div className="page-container gap-10!">
+      <div className="space-y-3 lg:space-y-8">
         <h1>
           <span title="General Kenobi">Hello There.</span> I&apos;m Craig
           Sampson
@@ -39,57 +39,48 @@ export default function About() {
           web applications.
         </p>
       </div>
-      <div className="bg-secondary/70 rounded-2xl px-6 overflow-hidden self-center w-full">
-        <Image
-          src={"/headshot.svg"}
-          alt="Headshot"
-          height={100}
-          width={100}
-          className="size-70 md:size-80 lg:size-100 xl:size-115 -mb-3 lg:-mb-6 mx-auto"
-        />
-      </div>
       <div className="flex flex-col gap-3">
+        <Image
+          src={"/headshot.jpg"}
+          alt="Craig Sampson Image"
+          height={4343}
+          width={4672}
+          className="h-70 md:h-80 lg:h-100 xl:h-115 w-auto mx-auto mb-3 rounded-xl"
+        />
         <h2>My Journey</h2>
         <p>
-          My path to software engineering wasn&apos;t a straight line — it
-          started in high school, when my architecture teacher, based off what
-          work she had see me do for 3 years, told me she thought I should
-          become an engineer. That small comment stuck with me and sparked my
-          curiosity about how things are built and why they work. I began
-          studying robotics, where I gained hands-on experience combining
-          mechanics, electronics, and problem-solving. During college, I took a
-          few introductory web development classes — and that&apos;s where
-          everything clicked. I quickly realized how much I enjoyed coding — the
-          creativity, the logic, and the instant feedback of bringing ideas to
-          life on screen. After spending some time working in the robotics
-          field, I realized it wasn&apos;t where I wanted to stay long-term. I
-          was more drawn to the problem-solving and creative aspects of
-          software, so I transitioned into software engineering — and I
-          haven&apos;t looked back since. Over the past three years, I&apos;ve
-          built full stack web applications that focus on efficiency,
-          scalability, and user experience.
+          My path to software engineering wasn&apos;t a straight line. It began in
+          high school, when my architecture teacher encouraged me to pursue
+          engineering. That sparked my curiosity about how things are built and why
+          they work. I explored that feeling through robotics, gaining
+          hands-on experience with mechanics, electronics, and problem-solving.
+          In college, an introductory web development course made everything
+          click. I discovered a passion for coding—the blend of creativity,
+          logic, and instant feedback. After working in robotics, I realized my
+          interests aligned more with software, leading me to transition into
+          web development, where I&apos;ve been focused ever since.
         </p>
       </div>
       <div className="flex flex-col gap-3">
         <h2>What I Do</h2>
         <h3 className="text-secondary">Full Stack Web Development</h3>
         <p>
-          Building responsive, scalable web applications using modern frameworks
-          and clean architecture.
-        </p>
-        <h3 className="text-secondary">Electronics Repair</h3>
-        <p>
-          Diagnosing and repairing consumer and small-device electronics —
-          keeping hardware running like new.
+          Designing and building responsive, scalable web applications using
+          modern frameworks and clean architecture.
         </p>
         <h3 className="text-secondary">Calligraphy Art</h3>
         <p>
           Designing hand-lettered pieces and signage that bring craftsmanship
           and personality to each project.
         </p>
+        <h3 className="text-secondary">Electronics Repair</h3>
+        <p>
+          Diagnosing and repairing a wide range of electronic devices —
+          keeping hardware running like new.
+        </p>
       </div>
       <div className="flex flex-col lg:flex-row items-start justify-between w-full gap-5 lg:gap-0">
-        <div className="flex flex-col w-full lg:max-w-lg gap-3">
+        <div className="flex flex-col w-full gap-3">
           <h2>Outside of Work</h2>
           <p>
             When I&apos;m not coding, repairing or creating, you will almost
@@ -99,8 +90,8 @@ export default function About() {
           <p>
             I continued my wrestling career in college and after that began
             training other martial arts including Brazilian Jiu-Jitsu, Judo and
-            MMA. Besides training I am the assistant wrestling coach at my
-            former high school as well as the head wrestling coach for my local
+            MMA. Besides training, I am the assistant wrestling coach at my
+            alma matter as well as the head wrestling coach for my local
             <a
               href="https://pierromma.com"
               target="_blank"
@@ -111,15 +102,6 @@ export default function About() {
               MMA team{" "}
             </a>
           </p>
-        </div>
-        <div className="self-center lg:mr-15">
-          <Image
-            src={"/bjj.jpg"}
-            alt="Craig Sampson BJJ"
-            width={2071}
-            height={4086}
-            className="h-130 w-auto rounded-2xl"
-          />
         </div>
       </div>
       <AboutContact />
