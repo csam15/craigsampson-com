@@ -24,13 +24,31 @@ export const metadata: Metadata = {
   },
 };
 
+const artPhotos = [
+  "adriana.JPEG",
+  "gallagher.JPEG",
+  "mom.JPEG",
+  "K.JPEG",
+  "L.JPEG",
+  "M.JPEG",
+  "grad.JPEG",
+];
+
 export default function About() {
   return (
     <div className="page-container gap-10!">
       <div className="space-y-3 lg:space-y-8">
-        <h1>
-          Calligraphy
-        </h1>
+        <h1>Calligraphy</h1>
+      </div>
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 w-full items-center">
+        {artPhotos.map((filename) => (
+          <img
+            key={filename}
+            src={`/art/${filename}`}
+            alt=""
+            className="w-full h-auto"
+          />
+        ))}
       </div>
     </div>
   );

@@ -53,14 +53,12 @@ export default async function RootLayout({
         />
       </head>
       <body className="font-stack-sans-notch bg-background">
-        <ThemeProvider attribute="class" defaultTheme="light">
+        <ThemeProvider attribute="class" defaultTheme="dark">
           <div className="xl:grid xl:grid-cols-[280px_1fr]">
-            {" "}
-            {/* 280px = ml-70 equivalent */}
             <header className="xl:col-start-1 xl:row-span-2">
               <Header />
             </header>
-            <main className="py-12 px-6 2xl:px-0 xl:pt-36 xl:col-start-2 max-w-[70rem] mx-auto">
+            <main className="py-12 px-6 2xl:px-0 xl:pt-36 xl:col-start-2 max-w-[70rem]">
               <div className="hidden xl:block fixed top-5 right-5">
                 <ThemeToggle />
               </div>
