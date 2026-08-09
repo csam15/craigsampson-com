@@ -30,6 +30,24 @@ export default function Contact() {
       <div className="flex flex-col items-start gap-6">
         <h1>Active</h1>
       </div>
+      <div className="flex flex-col items-start gap-6">
+        <h2>
+          Low Voltage Installation Department Lead @{" "}
+          <a href="https://www.briggsservice.com/low-voltage" target="_blank" rel="noopener noreferrer" className="hover:text-secondary">
+            Briggs Services
+          </a>
+        </h2>
+        <p>New York, NY</p>
+      </div>
+      <div className="flex flex-col items-start gap-6">
+        <h2>
+          Co-Founder & Tech Lead @{" "}
+          <a href="https://macdesignstudio.framer.website/" target="_blank" rel="noopener noreferrer" className="hover:text-secondary">
+            Macstudio
+          </a>
+        </h2>
+        <p>Remote</p>
+      </div>
     </div>
   );
 }
