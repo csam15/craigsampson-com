@@ -1,48 +1,20 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Fira_Mono } from "next/font/google";
 import "./globals.css";
 
 import Header from "./components/Navigation/Header";
-import Footer from "./components/Footer/Footer";
 import { ThemeProvider } from "next-themes";
 import ThemeToggle from "./components/ui/ThemeToggle";
 
-const bricolage = Bricolage_Grotesque({
-  subsets: ["latin"],
-  variable: "--",
-  weight: ["300", "400", "600", "700"],
-  display: "swap",
-});
-
-const fira_mono = Fira_Mono({
-  subsets: ["latin"],
-  variable: "--",
-  weight: ["400", "500", "700"],
-  display: "swap",
-});
-
 export const metadata: Metadata = {
   metadataBase: new URL("https://craigsampson.com"),
-  title:
-    "Craig Sampson - Full Stack Developer | Electronics Repair | Calligraphy Artist",
-  description:
-    "Craig Sampson is a full stack developer specializing in React, Next.js, and TypeScript. Also offering electronics repair and custom calligraphy services.",
-  keywords: [
-    "website design services staten island ",
-    "website development services staten island",
-    "React",
-    "Next.js",
-    "TypeScript",
-    "electronics repair services in staten island",
-    "calligraphy services in staten island",
-    "Craig Sampson",
-  ],
+  title: "Craig Sampson",
+  description: "CS",
+  keywords: ["Craig Sampson"],
   authors: [{ name: "Craig Sampson" }],
   creator: "Craig Sampson",
   openGraph: {
-    title: "Craig Sampson - Full Stack Developer & Creative Professional",
-    description:
-      "Full stack developer specializing in React, Next.js, and TypeScript. Also offering electronics repair and custom calligraphy services.",
+    title: "Craig Sampson",
+    description: "CS",
     url: "https://craigsampson.com",
     siteName: "Craig Sampson",
     locale: "en_US",
@@ -50,9 +22,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Craig Sampson - Full Stack Developer & Creative Professional",
-    description:
-      "Full stack developer specializing in React, Next.js, and TypeScript.",
+    title: "Craig Sampson",
+    description: "CS",
   },
   icons: {
     icon: "/favicon.svg",
@@ -69,25 +40,30 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${bricolage.variable} ${fira_mono.variable} bg-background`}
-      >
-        <ThemeProvider attribute="class" defaultTheme="light">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Stack+Sans+Notch:wght@200..700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="font-stack-sans-notch bg-background">
+        <ThemeProvider attribute="class" defaultTheme="dark">
           <div className="xl:grid xl:grid-cols-[280px_1fr]">
-            {" "}
-            {/* 280px = ml-70 equivalent */}
             <header className="xl:col-start-1 xl:row-span-2">
               <Header />
             </header>
-            <main className="py-12 px-6 2xl:px-0 xl:pt-36 xl:col-start-2 max-w-[70rem] mx-auto">
+            <main className="py-12 px-6 2xl:px-0 xl:pt-36 xl:col-start-2 max-w-[70rem]">
               <div className="hidden xl:block fixed top-5 right-5">
                 <ThemeToggle />
               </div>
               {children}
             </main>
-            <footer className="xl:col-start-2">
-              <Footer />
-            </footer>
           </div>
         </ThemeProvider>
       </body>
