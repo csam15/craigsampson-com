@@ -36,7 +36,7 @@ export default function NotFound() {
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 items-center">
           <PrimaryButton link="/" label="Back to Home" />
-          <SecondaryButton link="/projects" label="View Projects" />
+          <SecondaryButton link="/services" label="View Services" />
         </div>
 
         {/* Helpful Links */}
@@ -55,13 +55,6 @@ export default function NotFound() {
               className="text-secondary hover:text-primary transition-colors"
             >
               Services
-            </Link>
-            <span className="text-gray-400">•</span>
-            <Link
-              href="/projects"
-              className="text-secondary hover:text-primary transition-colors"
-            >
-              Projects
             </Link>
             <span className="text-gray-400">•</span>
             <Link

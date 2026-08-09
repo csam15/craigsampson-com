@@ -9,12 +9,6 @@ const nextConfig: NextConfig = {
     dangerouslyAllowSVG: true,
     contentDispositionType: "attachment",
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "cdn.sanity.io",
-      },
-    ],
   },
   async headers() {
     return [
@@ -54,7 +48,7 @@ const nextConfig: NextConfig = {
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
               "font-src 'self' https://fonts.gstatic.com",
               "img-src 'self' data: https:",
-              "connect-src 'self' https://*.sanity.io https://*.apicdn.sanity.io https://*.hubspot.com https://*.hsforms.com https://*.hs-scripts.com https://*.hs-analytics.net https://*.hubspotusercontent00.net https://*.usemessages.com",
+              "connect-src 'self' https://*.hubspot.com https://*.hsforms.com https://*.hs-scripts.com https://*.hs-analytics.net https://*.hubspotusercontent00.net https://*.usemessages.com",
               "frame-src 'self' https://*.hubspot.com https://*.hsforms.com",
               "frame-ancestors 'none'",
               "base-uri 'self'",

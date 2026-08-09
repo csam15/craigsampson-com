@@ -1,16 +1,9 @@
 import Hero from "./components/ui/homepage/Hero";
-import HomeServices from "./components/ui/homepage/services/HomeServices";
-import HomeProjects from "./components/ui/homepage/projects/HomeProjects";
-import { HomeContact } from "./components/ui/homepage/CallToAction";
 
 export default function Home() {
   return (
     <div className="page-container">
       <Hero />
-      <HomeProjects />
-      <HomeServices />
-      <HomeContact />
-      
     </div>
   );
 }

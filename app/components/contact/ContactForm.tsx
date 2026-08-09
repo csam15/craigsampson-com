@@ -98,7 +98,7 @@ export default function ContactForm() {
           <div className="flex flex-col gap-2 flex-1">
             <label
               htmlFor="name"
-              className="text-lg font-bricolage font-semibold"
+              className="text-lg font-stack-sans-notch font-semibold"
             >
               Name
             </label>
@@ -118,7 +118,7 @@ export default function ContactForm() {
           <div className="flex flex-col gap-2 flex-1">
             <label
               htmlFor="email"
-              className="text-lg font-bricolage font-semibold"
+              className="text-lg font-stack-sans-notch font-semibold"
             >
               Email
             </label>
@@ -139,7 +139,7 @@ export default function ContactForm() {
         <div className="flex flex-col gap-2">
           <label
             htmlFor="subject"
-            className="text-lg font-bricolage font-semibold"
+            className="text-lg font-stack-sans-notch font-semibold"
           >
             Subject
           </label>
@@ -159,7 +159,7 @@ export default function ContactForm() {
         <div className="flex flex-col gap-2">
           <label
             htmlFor="message"
-            className="text-lg font-bricolage font-semibold"
+            className="text-lg font-stack-sans-notch font-semibold"
           >
             Message
           </label>
