@@ -32,8 +32,8 @@ export default function Contact() {
       </div>
       <div className="flex flex-col items-start gap-6">
         <h2>
-          Low Voltage Installation Department Lead @{" "}
-          <a href="https://www.briggsservice.com/low-voltage" target="_blank" rel="noopener noreferrer" className="hover:text-secondary">
+          Low Voltage Systems Lead @{" "}
+          <a href="https://www.briggsservice.com/low-voltage" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 text-blue-600">
             Briggs Services
           </a>
         </h2>
@@ -41,8 +41,8 @@ export default function Contact() {
       </div>
       <div className="flex flex-col items-start gap-6">
         <h2>
-          Co-Founder & Tech Lead @{" "}
-          <a href="https://macdesignstudio.framer.website/" target="_blank" rel="noopener noreferrer" className="hover:text-secondary">
+          Co-Founder & Technical Director @{" "}
+          <a href="https://macdesignstudio.framer.website/" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-600 text-yellow-700 ">
             Macstudio
           </a>
         </h2>
