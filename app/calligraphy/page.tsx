@@ -31,6 +31,7 @@ const artPhotos = [
   "K.JPEG",
   "L.JPEG",
   "M.JPEG",
+  "NewHome.JPEG",
   "grad.JPEG",
 ];
 

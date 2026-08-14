@@ -2,12 +2,10 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Active - CS",
-  description:
-    "Active.",
+  description: "Active.",
   openGraph: {
     title: "Active - CS",
-    description:
-      "Active.",
+    description: "Active.",
     url: "https://craigsampson.com/contact",
     siteName: "Craig Sampson",
     locale: "en_US",
@@ -16,8 +14,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Active - CS",
-    description:
-      "Active.",
+    description: "Active.",
   },
   alternates: {
     canonical: "https://craigsampson.com/contact",
@@ -33,7 +30,12 @@ export default function Contact() {
       <div className="flex flex-col items-start gap-6">
         <h2>
           Low Voltage Systems Lead @{" "}
-          <a href="https://www.briggsservice.com/low-voltage" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 text-blue-600">
+          <a
+            href="https://www.briggsservice.com/low-voltage"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-800 hover:text-blue-600 hover:underline"
+          >
             Briggs Services
           </a>
         </h2>
@@ -42,7 +44,12 @@ export default function Contact() {
       <div className="flex flex-col items-start gap-6">
         <h2>
           Co-Founder & Technical Director @{" "}
-          <a href="https://macdesignstudio.framer.website/" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-600 text-yellow-700 ">
+          <a
+            href="https://macdesignstudio.framer.website/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-macstudio-hover text-macstudio hover:underline"
+          >
             Macstudio
           </a>
         </h2>
