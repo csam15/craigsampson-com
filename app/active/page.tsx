@@ -45,7 +45,7 @@ export default function Contact() {
         <h2>
           Co-Founder & Technical Director @{" "}
           <a
-            href="https://macdesignstudio.framer.website/"
+            href="https://www.macdesign.studio"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-macstudio-hover text-macstudio hover:underline"
